@@ -1,64 +1,41 @@
 ## 🏗Projeto de Arquitetura de Software
 
-### Conteúdo programático
+### Comandos do GIT
 
-- 1º Aula - Definições
-    - Se apresentando`(Aula quinzenal)`
-    - Conhecendo alunos`(Aula quinzenal)`
-    - Apresentação da metodologia de avaliação`(Aula quinzenal)`
-    - Apresentando roadmap dos conteúdos`(Aula quinzenal)`
-    - Falando sobre os projetos que serão desenvolvidos(Calculadora, Gerador QR Code Pix)`(Aula quinzenal)`
-    - Explicando sobre metodologia de avaliação com as entregas no GitHub`(Aula quinzenal)`
-    - ~~O que é arquitetura?~~
-    - ~~Discorrendo sobre arquitetura~~
-    - Java revisão(`A pedidos`)
-    - POO revisão(`A pedidos`)
+IMPORTANTE ESTAR com o GITBASH NA PASTA DO REPO(eng-soft-poo-terceiro-periodo)
 
-- 2º Aula - Git e Introdução a MVC
-    - Verificando se todos os alunos têm Java instalados, auxiliando instalação caso não.
-    - Discorrendo sobre Git
-    - Comandos do git
-    - Instalação git
-    - Criação conta GitHub
-    - `O que é arquitetura?`
-    - `Discorrendo sobre arquitetura`
-    - Discorrendo sobre arquitetura MVC
-    - Como será aplicado MVC nos projetos
-    
-- 3º Aula - Projeto Calculadora
-    - Criando o projeto, apenas log no console das operações - Calculadora
-    - Fork do projeto
-    - Cada aluno criando o projeto localmente
-    - Como abrir pull request - Todos os alunos devem ter sua pasta no projeto
-    
-    ⚠`Tarefa próxima aula, trazer calculadora com log no console funcional.`
-    
-- 4º Aula - Aplicando MVC
-    - Aplicando conceitos MVC ao projeto da calculadora
-    - Refatorando Calculadora para retornar as informações na View
-    
-    ⚠`Tarefa próxima aula, pull request projeto da calculadora`
-    
-- 5º Aula - Estruturando novo projeto
-    - Finalização da calculadora com MVC
-    - Inicio do projeto da geração QR Code PIX;
-    - Estruturação inicial projeto segundo arquitetura MVC
-- 6º Aula - Mocks
-    - Discorrendo sobre como funciona a comunicação na Web
-    - Explicação sobre o que é MOCK e quando utilizar
-    - Utilizando [mocki.io](https://mocki.io/) para criar um retorno estático dados do QR Code.
-    - Consumindo QR Code mocado
-- 7º Aula - Persistência
-    - Rápida apresentação sobre Docker e subindo container do PostgreSQL. Caso aluno tenha windows é mais simples instalar diretamente o Pg.
-    - Auxilio instalação Docker Alunos ou Pg caso Windows
-    - Persistindo Informações QR Code e apresentando na View
-    
-    ⚠`Tarefa próxima aula, pull request projeto PIX QR Code`
-    
-- 8º Aula - Entrega projeto
-    - Auxilio alunos finalização projeto
+Adicionar alterações
+> git add .
+
+Adicionar comitar localmente arquivos alterados
+> git commit -m
+
+Enviar para upstream(repositório remoto)
+> git push
+
+🚧CASO USUÁRIO NÃO CONFIGURADO
+
+Configurar usuário global na máquina
+> git config --global user.name "nomeUSerGit"
+
+Configurar e-mail usuário global na máquina
+> git config --global user.email "email_git@hotmail.com"
+
+🚧🚧REMOVER USUÁRIO DO GIT DA MÁQUINA CASO NÃO ESTEJA NO SEU COMPUTADOR PESSOAL
+
+> git config --global --unset user.name
+
+> git config --global --unset user.email
+
+🚧🚧BUSCAR POR Gerenciador de Credenciais no windows e remover o acesso dado ao GIT
 
 ---
+
+### Link do Notion🔥
+
+🏗Arquitetura - MVC - [Primeiro Bimestre](https://maze-leaf-ed4.notion.site/Primeiro-Bimestre-013e0180341e4a73b3ba2d1768fca330?pvs=4)
+
+💡Arquitetura Limpa - [Segundo Bimestre](https://maze-leaf-ed4.notion.site/Segundo-Bimestre-5db57c6301db4170aa0f5e5ca0efe79c?pvs=4)
 
 ### 🍴Fork e abertura de pull request
 
