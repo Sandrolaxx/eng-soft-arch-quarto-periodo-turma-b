@@ -1,1 +1,0 @@
-Trabalho de faculdade cujo objetivo era realizar uma calculadora simples usando java.
