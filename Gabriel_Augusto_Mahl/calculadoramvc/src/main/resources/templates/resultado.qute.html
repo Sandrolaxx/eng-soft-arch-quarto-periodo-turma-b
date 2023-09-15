@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        body {
+            background-color: red;
+            background-image: linear-gradient(to bottom right, #FA0079, #B098D3);
+        }
+
+        .box {
+            background-color: #F0F8FF;
+            opacity: 0.8;
+            border-style: solid;
+            border-color: #F0F8FF;
+            border-radius: 10px;
+            height: 22rem;
+            width: 23rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 2rem 3rem 2rem 3rem;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3), 0 0px 0px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            animation: loading 3s forwards infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .copyrightText {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: medium;
+            color: #fff;
+        }
+
+        .button {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #FFF;
+            border-radius: 6px;
+            border: 1px solid #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition-duration: 0s;
+        }
+
+        button:hover {
+            border: 1px solid #841692;
+            outline: 2px solid #841692;
+            background-color: #fad7ff;
+        }
+
+        .inputTitle {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: larger;
+            font-weight: bold;
+            color: #841692;
+        }
+
+        .inputResult {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: x-large;
+            font-weight: 600;
+            color: #841692;
+        }
+
+        span {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: larger;
+            font-weight: bold;
+            color: #841692;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form action="/calc" method="get">
+            <div class="box">
+                <img src="https://i.imgur.com/RwqQtcy.png" alt="Logo Eng. Software Fag">
+                <div class="title">
+                    <p class="inputTitle">Calculadora</p>
+                    <p class="inputTitle">do</p>
+                    <p class="inputTitle">Qute</p>
+                </div>
+                <p class="inputResult">Resultado é <span>{resultadoOperacao}</span></p>
+                <button class="button">Voltar</button>
+            </div>
+        </form>
+        <p class="copyrightText">Página criada por Gabriel Augusto Mahl 🦊</p>
+    </div>
+</body>
+
+</html>

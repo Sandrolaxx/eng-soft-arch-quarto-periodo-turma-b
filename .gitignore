@@ -37,3 +37,6 @@ nb-configuration.xml
 
 # Local environment
 .env
+
+!Lucas_Rodrigo_Leal_Lopes/
+!Lucas_Rodrigo_Leal_Lopes/**
