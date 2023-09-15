@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <div class="container">
+        <div id="box">
+            <form action="/some-page" method="post">
+                <label for="number1">Insira o primeiro número</label>
+                <br>
+                <input class="buttons" type="number" id="number1" name="number1" required>
+                <br>
+                <br>
+                <label for="number2">Insira o segundo número</label>
+                <br>
+                <input class="buttons" type="number" id="number2" name="number2" required>
+                <br>
+                <br>
+                <select class="buttons" id="operation" name="operation">
+                    <option value="add">Soma</option>
+                    <option value="sub">Subtração</option>
+                    <option value="multi">Multiplicação</option>
+                    <option value="divi">Divisão</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <button id="mandar" type="submit">Calcular</button>
+            </form>
+        </div>
+    </div>
+    
+
+    
+
+</body>
+
+<style>
+
+body{
+
+    background-image: linear-gradient(to right, rgb(255, 24, 136), white);
+    margin: 0px;
+
+}
+
+#boxh{
+
+    visibility: visible;
+    border-radius: 1vmin;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    padding: 7vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#box{
+
+    display: block;
+    border-radius: 1vmin;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    padding: 7vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#mandar, #voltar{
+
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 1px;
+    width: 100%;
+
+
+}
+
+.buttons{
+
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 1px;
+    width: 100%;
+
+}
+
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+label, h2{
+
+    color: purple;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const boxDiv = document.getElementById("box");
+        const boxhDiv = document.getElementById("boxh");
+        let result = null; // Inicialize a variável result com null
+    
+        form.addEventListener("submit", async function (event) {
+        //event.preventDefault(); // Evita o envio padrão do formulário
+
+        const formData = new FormData(form);
+        const formBody = new URLSearchParams(formData).toString();
+
+        const response = await fetch("/some-page", {
+            method: "POST",
+            body: formBody,
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+
+        if (response.ok) {
+            
+            result = await response.text();
+            console.log(`Novo valor de result: ${result}`);
+            
+            
+        }
+
+        
+
+    });
+
+
+    
+        // Lidar com o botão "Voltar"
+        const voltarButton = document.getElementById("voltar");
+        voltarButton.addEventListener("click", function () {
+            
+            boxDiv.style.visibility = "visible";
+            boxhDiv.style.visibility = "hidden";
+            
+            
+        });
+    });
+    </script>
+    
+    
+    
+    
+
+</html>

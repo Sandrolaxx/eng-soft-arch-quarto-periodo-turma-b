@@ -13,8 +13,6 @@ public class Principal {
 
         pedirOperacao();
 
-        
-        
     }
     
     public static void pedirOperacao() {
