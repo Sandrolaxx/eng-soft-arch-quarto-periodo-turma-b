@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Calculadora Everson</title>
+</head>
+
+<body>
+    <h1>Calculadora Everson</h1>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            /* Adiciona a transição da transformação */
+            transform-origin: center center;
+            /* Define o ponto de transformação no centro */
+        }
+
+        button:hover {
+            background-color: #0056B3;
+            transform: scale(1.05);
+            /* Escala o botão em 105% no hover */
+        }
+
+        p {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        form {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+
+    <form class="input">
+        <label for="num1">Número 1</label>
+        <input name="num1">
+        <label for="num2">Número 2</label>
+        <input name="num2">
+        <select name="operacao" id="operacao">
+            <option value="+" selected="selected">Soma</option>
+            <option value="-">Subtração</option>
+            <option value="*">Multiplicação</option>
+            <option value="/">Divisão</option>
+        </select>
+        <button type="submit">enviar</button>
+        <p>{resultado ?: "0"}
+        </p>
+    </form>
+</body>
+
+</html>
