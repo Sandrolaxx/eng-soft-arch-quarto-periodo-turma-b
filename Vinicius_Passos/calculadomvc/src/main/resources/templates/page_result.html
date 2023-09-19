@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantástico</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+            background-color: #216050;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+    h1{
+        color: #c0914b;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    h2{
+        padding-top: 50px;
+        color: #fbfbfb;
+    }
+    div {
+        width: 550px;
+        height: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background-color: #094924;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    button {
+        width: 250px;
+        height: 35px;
+        background-color: #c0914b;
+        color: #e3e3e3;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+
+    <div>
+        <h2><b>{mensagem ?: "Insira um número"}</h2>
+        <h1>{valor1} {opcao} {valor2} = {resultado}</h1>
+        <a href="/CalculadoraControler"><button>Voltar</button></a>
+    </div>
+
+</body>
+
+</html>

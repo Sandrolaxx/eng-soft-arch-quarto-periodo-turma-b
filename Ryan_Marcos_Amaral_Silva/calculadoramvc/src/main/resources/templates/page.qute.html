@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <style>
+        body { background-color: #000; color: #fff; margin-left: 5%; font-family: Arial, Helvetica, sans-serif;}
+        h1 { color: #4695EB; font-size: 6vw;}
+        h1 b { color: #be9100;}
+        p { font-size: 2vw;}
+    </style>
+</head>
+<body>
+    <form action="/calc" method="POST">
+        <div id="main">
+            <h1>Calculadora</h1>
+            <input type="number" name="valor1" placeholder="1º valor"><br>
+            <input type="number" name="valor2" placeholder="2º valor"><br>
+            <h3>Selecione a operação</h3>
+            <select name="operacao">
+                <option value="+">Adição</option>
+                <option value="-">Subtração</option>
+                <option value="*">Multiplicação</option>
+                <option value="/">Divisão</option>
+            </select><br>
+            <button type="submit">Calcular</button><br>
+            <h2>Resultado: {result}</h2>
+        </div>
+    </form>
+</body>
+</html>

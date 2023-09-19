@@ -23,7 +23,25 @@
     </style>
 </head>
 <body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
+<h1>Resultado: <b>{result ?: "Qute"}</b></h1>
+
+<form action="/some-page" method="POST">
+    <label>Valor 1</label>
+    <input name="valor1" type=""/> 
+    <br/>
+    <label>Valor 2</label>
+    <input name="valor2" type=""/>
+    <br/>
+    <select name="opcao">
+        {#if operacoes != null}
+            {#for item in operacoes}
+                <option>{item}</option>
+            {/for}
+        {/if}
+    </select>
+    <br/>
+    <button>Calcular</button>
+</form>
 
 <p>Create your web page using Quarkus RESTEasy & Qute</p>
 </body>

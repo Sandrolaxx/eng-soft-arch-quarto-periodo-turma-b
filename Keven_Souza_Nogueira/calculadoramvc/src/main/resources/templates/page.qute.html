@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora MVC</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1 {
+            color: #4695EB;
+            font-size: 6vw;
+        }
+
+        h1 b {
+            color: #be9100;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+
+        form.calc-numbers {
+            display: table;
+        }
+
+        div.calc-numbers {
+            display: table-row;
+        }
+
+        label,
+        input {
+            display: table-cell;
+            margin-bottom: 10px;
+        }
+
+        label {
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/calculadora" method="get" class="calc-numbers">
+        <div class="calc-numbers">
+            <label for="valor1">Digite o primeiro número: </label>
+            <input type="text" name="valor1" id="valor1"/>
+        </div>
+        <div class="calc-numbers">
+            <label for="valor2">Digite o segundo número:</label>
+            <input type="text" name="valor2" id="valor2"/>
+        </div>
+        <div class="calc-numbers">
+            <label for="operacoes">Digite a operação matemática:</label>
+            {#for item in items}
+                {item.name}
+            {/for}
+        </div>
+        <div class="calc-numbers">
+            <input type="submit" value="Calcular" />
+        </div>
+    </form>
+</body>
+
+</html>
