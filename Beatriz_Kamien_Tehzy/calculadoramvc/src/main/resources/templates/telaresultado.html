@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="quadrado">
+        <h1 class="titulo">Resultado:</h1>
+        <h1 class="resultado"><b>{resultado}</b></h1>
+    </div>
+    <style>
+        body{
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, #c7b6be 0%, #fab4b6 0%, #89abb4 92%);
+            color: #fff;
+        }
+        .titulo{
+            position: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(8%,20%);
+            color:#89abb4;
+            font-size: 30px;
+        }
+        .resultado{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-100%);
+            color:#89abb4;
+            font-size: 30px;
+        }
+        .quadrado{
+            width: 400px;
+            height: 400px;
+            background-color:#ffe7d8;
+            border-radius: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</body>
+</html>
