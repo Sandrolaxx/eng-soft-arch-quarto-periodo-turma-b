@@ -1,4 +1,4 @@
-package com.fag.controller;
+package fag.com.controller;
 
 import static java.util.Objects.requireNonNull;
 
@@ -12,8 +12,8 @@ import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import com.fag.dto.ResultadoDTO;
-import com.fag.model.CalculadoraService;
+import fag.com.dto.ResultadoDTO;
+import fag.com.model.CalculadoraService;
 
 @Path("/calculadora")
 public class CalculadoraControler {

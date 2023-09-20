@@ -1,6 +1,6 @@
-package com.fag.model;
+package fag.com.model;
 
-import com.fag.dto.ResultadoDTO;
+import fag.com.dto.ResultadoDTO;
 
 public class CalculadoraService {
     public ResultadoDTO realizarCalculo(Double valor1, Double valor2, String operation) {

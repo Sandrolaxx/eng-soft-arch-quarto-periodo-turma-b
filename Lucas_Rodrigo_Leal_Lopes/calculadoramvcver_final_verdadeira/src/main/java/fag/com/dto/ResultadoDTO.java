@@ -1,4 +1,4 @@
-package com.fag.dto;
+package fag.com.dto;
 
 public class ResultadoDTO {
     private Double resultado;
