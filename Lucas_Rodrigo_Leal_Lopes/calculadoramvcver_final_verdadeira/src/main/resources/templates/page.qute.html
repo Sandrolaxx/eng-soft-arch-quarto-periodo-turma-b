@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #8a2be2, #4b0082);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 1;
+            padding: 0;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #52d053;
+            font-size: 6vw;
+        }
+
+        h1 b {
+            color: #340070;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        select {
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        input[type="submit"] {
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            background-color: #52d053;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+
+    <form action="/calculadora" method="POST">
+        <input type="text" name="num1" placeholder="Valor 1" pattern="^[0-9]+(\.[0-9]+)?$" required><br>
+
+        <select name="operation">
+            {#for op in test}
+            <option>
+                {op}
+            </option>
+            {/for}
+        </select>
+        <br>
+        <input type="text" name="num2" placeholder="Valor 2" pattern="^[0-9]+(\.[0-9]+)?$" required>
+        <br>
+        <input type="submit" value="Calcular">
+
+        <b>{result.resultado ?: ""}</b>
+        <b class="error-message">{result.error ?: ""}</b>
+    </form>
+
+</body>
