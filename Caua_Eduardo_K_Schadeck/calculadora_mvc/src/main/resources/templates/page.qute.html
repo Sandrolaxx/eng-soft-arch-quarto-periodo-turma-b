@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora MVC</title>
+    <style>
+        body {
+            background-color: #18181b;
+            background-size: 1000% 1000%;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            background-color: #262626;
+            color: #f8fafc;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator h2 {
+            color: #ffffffd2;
+        }
+        .calculator h3{
+            padding: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 50px;
+        }
+
+        button {
+            background-color: #4800ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+        }
+
+        #resultado {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <h2>Calculadora MVC</h2>
+        <form method="POST" action="/calculadora" enctype="application/x-www-form-urlencoded">
+
+        <input name="valor1" placeholder="1° Número" />
+        <br />
+        <br />
+        <input name="valor2" placeholder="2° Número" />
+        <h3>Selecione a operação que deseja realizar</h3>
+        <select name="opcao">
+            <option value="addition">Somar</option>
+            <option value="subtraction">Subtração</option>
+            <option value="division">Divisão</option>
+            <option value="multiplication">Multiplicação</option>
+        </select>
+            <button type="submit">Calcular</button>
+            <p id="resultado">{result}</p>
+        </form>
+    </div>
+</body>
+
+</html>

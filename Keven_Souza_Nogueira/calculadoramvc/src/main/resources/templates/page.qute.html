@@ -6,16 +6,17 @@
     <title>Calculadora MVC</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #746c6c;
             color: #fff;
+            align-items: center;
         }
 
         h1 {
-            color: #4695EB;
+            color: #be9100;
             font-size: 6vw;
         }
 
-        h1 b {
+        h3 b {
             color: #be9100;
         }
 
@@ -23,46 +24,71 @@
             font-size: 2vw;
         }
 
-        form.calc-numbers {
-            display: table;
+        .table-responsive {
+            width: 100% !important;
         }
 
-        div.calc-numbers {
-            display: table-row;
+        .table {
+            border: 1px solid red;
+            width: 50% !important;
+            margin: auto;
         }
 
-        label,
-        input {
-            display: table-cell;
-            margin-bottom: 10px;
-        }
-
-        label {
-            padding-right: 10px;
+        .table-status {
+            margin-top: 20px;
+            margin-bottom: 20px !important;
         }
     </style>
 </head>
-
 <body>
-    <form action="/calculadora" method="get" class="calc-numbers">
-        <div class="calc-numbers">
-            <label for="valor1">Digite o primeiro número: </label>
-            <input type="text" name="valor1" id="valor1"/>
-        </div>
-        <div class="calc-numbers">
-            <label for="valor2">Digite o segundo número:</label>
-            <input type="text" name="valor2" id="valor2"/>
-        </div>
-        <div class="calc-numbers">
-            <label for="operacoes">Digite a operação matemática:</label>
-            {#for item in items}
-                {item.name}
-            {/for}
-        </div>
-        <div class="calc-numbers">
-            <input type="submit" value="Calcular" />
-        </div>
-    </form>
+    <table align="center">
+        <tr aria-rowspan="3">
+            <td>
+                <h3>Resultado: <b>{resultado ?: ""}</b></h3>
+            </td>
+        </tr>
+        <form action="/calcular" method="post">
+            <tr>
+                <td>
+                    <label>
+                        Primeiro Número:
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Op:
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Segundo Número:
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="valor1" />
+                </td>
+                <td>
+                    <select name="opcao">
+                        <option>+</option>
+                        <option>-</option>
+                        <option>*</option>
+                        <option>/</option>
+                    </select>
+                </td>
+                <td>
+                    <input name="valor2" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td aria-rowspan="2" align="right">
+                    <button type="submit">Calcular</button>
+                </td>
+            </tr>
+        </form>
+    </table>
 </body>
-
 </html>
