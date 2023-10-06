@@ -28,6 +28,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        #erro{
+            color: red;
+        }
     </style>
 
 </head>
@@ -35,13 +38,13 @@
 <body>
     <div>
         {#if warn}
-            <p></p>
+            <p id="erro">O divisor não pode ser 0</p>
         {#else}
-            
+            <p>
+                O resultado da {opcao} é {result}
+            </p>
         {/if}
-        <p>
-            O resultado da {opcao} é {result}
-        </p>
+        
     </div>
 </body>
 

@@ -71,9 +71,7 @@ public class SomePage {
                 .data("opcao", opcao)
                 .data("warn", warn);
 
-        //TamplateInstace = resultadoFinal.getResult();
 
     }
 
 }
-//Oi
