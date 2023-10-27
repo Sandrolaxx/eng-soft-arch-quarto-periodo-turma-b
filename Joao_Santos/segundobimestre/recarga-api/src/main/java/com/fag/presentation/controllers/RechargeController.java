@@ -1,4 +1,4 @@
-package com.fag.presentation.controller;
+package com.fag.presentation.controllers;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -11,6 +11,7 @@ public class RechargeController {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hola Marilene";
+        return "Hello RESTEasy";
     }
+
 }
