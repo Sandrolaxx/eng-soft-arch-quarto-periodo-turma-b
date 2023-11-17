@@ -1,9 +1,9 @@
 package com.fag.domain.entities;
 
 public class PhoneBO {
- 
+    
     private Integer stateCode;
-
+    
     private Integer countryCode;
 
     private String number;
@@ -25,5 +25,5 @@ public class PhoneBO {
     public String getNumber() {
         return number;
     }
-    
+
 }
