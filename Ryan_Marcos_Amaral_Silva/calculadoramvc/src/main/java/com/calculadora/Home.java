@@ -21,8 +21,9 @@ public class Home {
 
     @GET
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance get(@QueryParam("resultado") String r) {
-        return page.data("resultado", r);
+    public TemplateInstance get(@QueryParam("resultado") String r, @QueryParam("res") String res) {
+        return page.data("resultado", r).data("res1", res).data("res2", "none");
+
     }
 
 }

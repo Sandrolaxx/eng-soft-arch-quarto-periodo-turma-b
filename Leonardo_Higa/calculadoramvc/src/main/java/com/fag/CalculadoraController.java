@@ -34,8 +34,6 @@ public class CalculadoraController {
             @FormParam("name") String name,
             @FormParam("valor1") Double valor1,
             @FormParam("valor2") Double valor2) {
-        System.out.println(valor1);
-        System.out.println(valor2);
         double result = valor1 + valor2;
 
         return page.data("result", result);

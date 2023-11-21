@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello</title>
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+      h1 {
+        color: #4695eb;
+        font-size: 6vw;
+      }
+
+      h1 b {
+        color: #be9100;
+      }
+
+      p {
+        font-size: 2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Resultado <b>{resultado ?: "Nada ainda"}</b></h1>
+
+    <form action="/calculadora" method="post" >
+      <label> Valor1 </label>
+      <input name="valor1" />
+      <br />
+      <br />
+      <label> Valor1 </label>
+      <input name="valor2" />
+      <br />
+      <br />
+      <select name="opcao">
+        <option>Soma</option>
+        <option>Sub</option>
+        <option>Mult</option>
+        <option>Div</option>
+      </select>
+      <br />
+      <br />
+      <button>Calcular</button>
+    </form>
+
+    <p>Create your web page using Quarkus RESTEasy & Qute</p>
+  </body>
+</html>

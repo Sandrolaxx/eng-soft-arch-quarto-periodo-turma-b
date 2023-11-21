@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(137deg, rgb(139 136 189) 0%, rgba(229, 41, 145, 1) 50%, rgb(157 192 199) 110%);
+  }
+
+  .container-box {
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    background-color: #F0F8FF;
+    border-radius: 10px;
+    padding: 30px 10px 15px 10px;
+  }
+
+button{
+    margin: 10px 20px 10px 20px;
+    width: 230px;
+    height: 30px;
+    border: 0.5px solid gray;
+    boder:none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor:pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease;
+  }
+button:focus {
+    outline:none;
+  }
+  button{
+    margin-top:20px;
+    border-radius: 5px;
+    height:30px;
+    background-color: #ffff;
+    font-weight:bold;
+  }
+  button:hover{
+    background-color:#06748E;
+    color:white;
+  }
+  .logo{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    margin:-20px 0 0 280px;
+    animation: loading 3s forwards infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  p{
+    color: black;
+    margin: 50px;
+    font-size: 20px;
+  }
+
+</style>
+<body>
+
+<form method="get" action="/calculadora"/>
+  <div class="container">
+    <img class="logo" src="https://i.imgur.com/RwqQtcy.png" alt="Logo curso Eng. Software FAG"/>
+    <div class="container-box">
+      <h3>O resultado é:</h3>
+      <p>
+        {result}
+      </p>
+      <button>Voltar</button>
+    </div>
+  </div>
+</form>
+</body>

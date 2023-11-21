@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .sustentacao{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 20px;
+        }
+        .caixa{
+            background-color: #F0F8FF;
+            border-style: solid;
+            border-color: #F0F8FF;
+            border-radius: 10px;
+            height: 22rem;
+            width: 23rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 2rem 3rem 2rem 3rem;
+            box-shadow: 0px 0px 30px rgba(10, 2, 248, 0.3), 0 0px 0px rgba(10, 2, 248, 0.3);
+            position: relative;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            animation: loading 3s forwards infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        body {
+            background-color: white;
+            background-image: linear-gradient(to bottom right, #F7057B, #B097D2);
+        }
+
+        h1 {
+            color: #111111;
+            font-size: 25px;
+        }
+
+        h1 b {
+            color: #0eae29;
+        }
+        h2 {
+            color: black;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+
+        p {
+            font-size: 15px;
+            color: black;
+        }
+        label {
+            color: black;
+            font-size: medium;
+            font-family: sans-serif;
+
+        }
+        select {
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 0.20rem;
+            width: 50%;
+        }
+        input {
+            width: 100%;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 0.5rem;
+        }
+        button {
+            width: 50%;
+            padding: 0.5rem;
+            background-color: #FFF;
+            border-radius: 6px;
+            border: 1px solid #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition-duration: 0s;
+            font-family: sans-serif;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="sustentacao">
+        <form action="/calculadora" method="POST">
+            <div class="caixa">
+                <img src="https://i.imgur.com/RwqQtcy.png" alt="Logo Eng. Software Fag">
+                <br>
+                <label>
+                    Digite o primeiro valor
+                </label>
+                <input name="valor1">
+                <br />
+                <br />
+                <label>
+                    Digite o segundo valor
+                </label>
+                <input name="valor2">
+                <br />
+                <br />
+                <select name="opt">
+                    {#if op != null}
+                    {#for opc in op}
+                    <option>
+                        {opc}
+                    </option>
+                    {/for}
+                    {/if}
+                </select>
+                <br/>
+                <button name="calcular">Calcular</button>
+                <br>
+                <p class="acompanhar"> O resultado é: </p>
+                <h2>{resultado ?: "nada ainda"}</h2>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

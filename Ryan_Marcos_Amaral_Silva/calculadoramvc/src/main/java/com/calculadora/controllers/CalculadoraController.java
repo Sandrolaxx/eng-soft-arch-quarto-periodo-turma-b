@@ -15,12 +15,13 @@ import java.util.List;
 
 import com.calculadora.models.CalculadoraModel;
 
-@Path("/calc")
+@Path("/calculadora")
 public class CalculadoraController {
 
     private final Template page;
     private final List<String> operations = List.of("+", "-", "*", "/");
     CalculadoraModel calc = new CalculadoraModel();
+    double result;
 
     @Inject
     public CalculadoraController(Template page) {
@@ -35,11 +36,11 @@ public class CalculadoraController {
 
     @POST
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance calcular(@FormParam("operacao") String operacao, @FormParam("valor1") double valor1, @FormParam("valor2") double valor2) {
-        double result;
+    public TemplateInstance calculadora(@FormParam("op") String operacao, @FormParam("valor1") double valor1, @FormParam("valor2") double valor2) {
+        
 
-        result = calc.calculadora(operacao, valor1, valor2);
+        this.result = calc.calculadora(operacao, valor1, valor2);
 
-        return page.data("result", result);
+        return page.data("resultado", this.result);
     }
 }

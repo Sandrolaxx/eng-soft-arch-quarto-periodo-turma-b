@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form action="/calculadora/calculate" method="post">
+        <div class= "quadrado" ><h1 class="txtcalculadora">Calculadora</h1></div>
+
+        <div class="cssinput1">
+            <label for="numero1">Digite o primeiro valor:</label>
+            <input type="text" name="numero1" max="100" placeholder="Número 1"><br>
+        </div>
+
+        <div class="cssinput2">
+            <label id="teste" for="numero2">Digite o segundo valor:</label>
+            <input type="text" name="numero2" max="100" placeholder="Número 2"><br>
+        </div>
+
+        <select name="operation" class="operacao">
+            <option value="somar">Somar</option>
+            <option value="subtrair">Subtrair</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select><br>   
+
+
+        <div class="botao">
+            <input type="submit" value= "Calcular">
+        </div>
+
+    </form>
+    <style>
+        body {
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(179,221,255,0.9719537473192402) 0%, rgba(141,23,223,1) 92%);
+            color: #fff;
+        }
+        .txtcalculadora {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -425%);
+            color: #3f0886;
+            font-size: 45px;
+            
+        }
+        .quadrado {
+            width: 400px;
+            height: 400px; 
+            background-color: #ecf0f3; 
+            border-radius: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cssinput1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -200%);
+            color: #000000;
+            font-size: large; 
+        }
+
+        .cssinput2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000000;
+            font-size: large; 
+        }
+
+        .botao {
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 350%);
+
+
+        }
+        .operacao {
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 200%);
+            color: #000000;
+        }
+    </style>
+</body>
+</html>

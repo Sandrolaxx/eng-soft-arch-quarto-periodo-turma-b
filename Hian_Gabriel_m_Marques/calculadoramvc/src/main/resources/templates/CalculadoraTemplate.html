@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Hian,QUTE</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #FF5733, #fcc95a, #33FF57, #13adc1, #0015ff,#a600ff,#ff00f2,#ff001e,#ff0000);
+            background-size: 1000% 1000%;
+            animation: gradient 8s infinite;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            background-color: rgba(95, 95, 95, 0.1);
+            background: transparent;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator h2 {
+            color: #151515d2;
+        }
+        .calculator h3{
+            padding: 10px;
+        }
+
+        input[type="number"] {
+            width: 92%;
+            padding: 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 50px;
+        }
+
+        button {
+            background-color: #4800ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+        }
+
+        #resultado {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #0d0909;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <h2>Calculadora HIAN, QUTE</h2>
+        <form method="POST" action="/calculadora" enctype="application/x-www-form-urlencoded">
+
+            <input type="number" id="numero1" name="numero1" placeholder="Número 1">
+            <input type="number" id="numero2" name="numero2" placeholder="Número 2">
+            <h3>Selecione o calculo desejado!</h3>
+            <select id="operacao" name="operacao">
+                <option value="adicao">Adição</option>
+                <option value="subtracao">Subtração</option>
+                <option value="multiplicacao">Multiplicação</option>
+                <option value="divisao">Divisão</option>
+            </select>
+            <button type="submit">Calcular</button>
+            <p id="resultado">{resultado}</p>
+        </form>
+    </div>
+</body>
+
+</html>

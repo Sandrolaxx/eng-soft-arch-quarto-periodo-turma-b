@@ -1,4 +1,3 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true,
-    "java.project.sourcePaths": []
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
