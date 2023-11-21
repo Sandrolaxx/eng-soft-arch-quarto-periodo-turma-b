@@ -7,10 +7,12 @@ import com.fag.domain.repositories.IPixRepository;
 import com.fag.infra.celcoin.dto.CelcoinTokenDTO;
 import com.fag.infra.celcoin.dto.PixResponse;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.core.Form;
 
-public class CelocinPixRepository implements IPixRepository {
+@ApplicationScoped
+public class CelcoinPixRepository implements IPixRepository {
 
     @Inject
     @RestClient

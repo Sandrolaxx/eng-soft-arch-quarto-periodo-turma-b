@@ -2,15 +2,16 @@ package com.fag.service;
 
 import com.fag.domain.dto.PixDTO;
 import com.fag.domain.usecases.CreatePix;
-import com.fag.infra.celcoin.dto.CelcoinTokenDTO;
-import com.fag.infra.celcoin.repository.CelocinPixRepository;
+import com.fag.infra.celcoin.repository.CelcoinPixRepository;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.core.Response;
 
+@ApplicationScoped
 public class PixService {
     @Inject
-    CelocinPixRepository PixRepository;
+    CelcoinPixRepository PixRepository;
 
     public Response genQRCode(PixDTO dto) {
 

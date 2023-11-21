@@ -1,9 +1,16 @@
 package com.fag.infra.celcoin.dto;
 
+import jakarta.json.bind.annotation.JsonbProperty;
+
 public class MerchantDTO {
 
+    @JsonbProperty("postalCode")
     private String postalCode;
+
+    @JsonbProperty("city")
     private String city;
+
+    @JsonbProperty("name")
     private String name;
 
     public String getPostalCode() {
