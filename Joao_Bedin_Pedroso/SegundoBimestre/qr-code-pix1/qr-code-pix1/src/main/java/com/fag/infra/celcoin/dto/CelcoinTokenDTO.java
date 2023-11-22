@@ -36,7 +36,4 @@ public class CelcoinTokenDTO {
     public void setTokenType(String tokenType) {
         this.tokenType = tokenType;
     }
-
-    
-    
 }

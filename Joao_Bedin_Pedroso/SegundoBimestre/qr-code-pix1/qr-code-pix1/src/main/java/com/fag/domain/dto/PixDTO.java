@@ -1,16 +1,12 @@
 package com.fag.domain.dto;
 
-import java.math.BigDecimal;
-
 public class PixDTO {
-
-    public String id;
-    public String key;
-    public BigDecimal amount;
-    public String transactionIdentification;
-    private Merchant merchant;
-
-    private String emv;
+    private String id;
+    private String key;
+    private Double amount;
+    private String qrCode;
+    private MerchantDTO merchant;
+    private Long transactionId;
 
     public String getId() {
         return id;
@@ -28,63 +24,35 @@ public class PixDTO {
         this.key = key;
     }
 
-    public BigDecimal getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(BigDecimal amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 
-    public String getTransactionIdentification() {
-        return transactionIdentification;
+    public String getQrCode() {
+        return qrCode;
     }
 
-    public void setTransactionIdentification(String transactionIdentification) {
-        this.transactionIdentification = transactionIdentification;
+    public void setQrCode(String qrCode) {
+        this.qrCode = qrCode;
     }
 
-    public Merchant getMerchant() {
+    public MerchantDTO getMerchant() {
         return merchant;
     }
 
-    public void setMerchant(Merchant merchant) {
+    public void setMerchant(MerchantDTO merchant) {
         this.merchant = merchant;
     }
 
-    public String getEmv() {
-        return emv;
+    public Long getTransactionId() {
+        return transactionId;
     }
 
-    public void setEmv(String emv) {
-        this.emv = emv;
+    public void setTransactionId(Long transactionId) {
+        this.transactionId = transactionId;
     }
-
-    public static class Merchant {
-        private String postalCode;
-        private String city;
-        private String name;
-
-        public String getPostalCode() {
-            return postalCode;
-        }
-        public void setPostalCode(String postalCode) {
-            this.postalCode = postalCode;
-        }
-        public String getCity() {
-            return city;
-        }
-        public void setCity(String city) {
-            this.city = city;
-        }
-        public String getName() {
-            return name;
-        }
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        
-    }
-    
 }

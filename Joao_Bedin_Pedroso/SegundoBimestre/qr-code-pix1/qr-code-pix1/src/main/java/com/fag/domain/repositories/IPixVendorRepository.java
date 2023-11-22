@@ -2,7 +2,6 @@ package com.fag.domain.repositories;
 
 import com.fag.domain.dto.PixDTO;
 
-public interface IPixRepository {
-    
-    PixDTO create(PixDTO dto);
+public interface IPixVendorRepository {
+    PixDTO create(PixDTO pix);
 }

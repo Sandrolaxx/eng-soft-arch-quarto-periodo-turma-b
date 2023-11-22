@@ -2,9 +2,9 @@ package com.fag.infra.celcoin.repository;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import com.fag.domain.dto.PixDTO;
+import com.fag.infra.celcoin.dto.CelcoinPixDTO;
+import com.fag.infra.celcoin.dto.CelcoinPixResponseDTO;
 import com.fag.infra.celcoin.dto.CelcoinTokenDTO;
-import com.fag.infra.celcoin.dto.PixResponse;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.Consumes;
@@ -18,14 +18,14 @@ import jakarta.ws.rs.core.MediaType;
 @RegisterRestClient(baseUri = "https://sandbox.openfinance.celcoin.dev")
 public interface RestClientCelcoin {
 
-   @POST
+    @POST
     @Path("/v5/token")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     CelcoinTokenDTO generateToken(Form form);
 
-    //Adicionar request de geração QR Code
     @POST
-    @Path("pix/v1/brcode/static")
-    PixResponse nomeMetodo(PixDTO dto, @HeaderParam("Authorization") String token);
+    @Path("/pix/v1/brcode/static")
+    @Consumes(MediaType.APPLICATION_JSON)
+    CelcoinPixResponseDTO handlePix(@HeaderParam("Authorization") String token, CelcoinPixDTO pix);
 
 }
