@@ -1,4 +1,4 @@
-package com.fag.domain.usecases;
+package com.fag.domain.useCases;
 
 import java.util.List;
 
