@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultado</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: linear-gradient(to right, rgb(83, 8, 117), rgb(153, 33, 233));
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            color: white;
+        }
+
+        .background-box {
+            background-color: rgba(218, 158, 241, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            border-color: #ffffff;
+        }
+        .titulo{
+            color: black;
+        }
+
+        button {
+            background-color: #420b53;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            float: right;
+        }
+
+        button:hover {
+            background-color: #ad00b3;
+            color: #FFFFFF;
+        }
+        .corpo{
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <fieldset class="background-box">
+        <p class="titulo">O Resultado da {opcao}</p>
+        <p class="corpo">{valor1} {operaSinal} {valor2} = {resultado}</p>
+        <a href="/some-page"><button>Voltar</button></a>
+        </fieldset>
+    </div>
+</body>
+</html>

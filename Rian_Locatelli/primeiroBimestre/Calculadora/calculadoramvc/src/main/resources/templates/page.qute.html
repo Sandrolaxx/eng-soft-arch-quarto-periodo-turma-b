@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: linear-gradient(to right, rgb(83, 8, 117), rgb(153, 33, 233));
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .background-box {
+            background-color: rgba(218, 158, 241, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            border-color: #ffffff;
+        }
+
+        .valor-div label {
+            color: white;
+        }
+
+        legend {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            color: rgb(0, 0, 0);
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        select[name="opcao"] {
+            background-color: #420b53;
+            color: #FFFFFF;
+            outline: none;
+        }
+
+        select[name="opcao"]:hover {
+            background-color: #ad00b3;
+            color: #FFFFFF;
+        }
+
+        button {
+            background-color: #420b53;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            float: right;
+        }
+
+
+        button:hover {
+            background-color: #ad00b3;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="box" action="/some-page/resultado" method="POST">
+        <fieldset class="background-box">
+            <legend>Calculadora</legend>
+            <div class="valor-div" id="valor1">
+                <label>Valor 1 </label>
+                <input class="inputUser" name="valor1" type="number" required/>
+            </div>
+            <br>
+            <div class="valor-div" id="valor2">
+                <label>Valor 2 </label>
+                <input class="inputUser" name="valor2" type="number" required/>
+            </div>
+            <br>
+            <select name="opcao">
+                {#if operacoes != null}
+                {#for item in operacoes}
+                <option>{item}</option>
+                {/for}
+                {/if}
+            </select>
+            <button>Calcular</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
