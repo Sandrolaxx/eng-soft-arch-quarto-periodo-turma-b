@@ -1,4 +1,4 @@
-package com.fag.domain.usecases;
+package com.fag.domain.useCases;
 
 import com.fag.domain.dto.RechargeDTO;
 import com.fag.domain.entities.RechargeBO;
