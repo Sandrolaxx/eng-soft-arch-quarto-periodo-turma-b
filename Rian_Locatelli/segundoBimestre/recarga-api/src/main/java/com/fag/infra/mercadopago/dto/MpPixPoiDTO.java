@@ -2,16 +2,16 @@ package com.fag.infra.mercadopago.dto;
 
 import jakarta.json.bind.annotation.JsonbProperty;
 
-public class MpPixPoiDTO {
+public class MPPixPoiDTO {
 
     @JsonbProperty("transaction_data")
-    private MpPixResponseTrxData trxData;
+    private MPPixResponseTrxData trxData;
 
-    public MpPixResponseTrxData getTrxData() {
+    public MPPixResponseTrxData getTrxData() {
         return trxData;
     }
 
-    public void setTrxData(MpPixResponseTrxData trxData) {
+    public void setTrxData(MPPixResponseTrxData trxData) {
         this.trxData = trxData;
     }
 

@@ -19,7 +19,7 @@ public class PixController {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public Response handleCreatePix(PixDTO dto) {
-        return service.genQRCode(dto);
+        return service.handlePix(dto);
     }
 
 }

@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import jakarta.json.bind.annotation.JsonbProperty;
 
-public class MpPixDTO {
+public class MPPixDTO {
 
     private String description;
 
@@ -14,7 +14,7 @@ public class MpPixDTO {
     @JsonbProperty("transaction_amount")
     private BigDecimal amount;
 
-    private MpPixPayerDTO payer;
+    private MPPixPayerDTO payer;
 
     public String getDescription() {
         return description;
@@ -40,11 +40,11 @@ public class MpPixDTO {
         this.amount = amount;
     }
 
-    public MpPixPayerDTO getPayer() {
+    public MPPixPayerDTO getPayer() {
         return payer;
     }
 
-    public void setPayer(MpPixPayerDTO payer) {
+    public void setPayer(MPPixPayerDTO payer) {
         this.payer = payer;
     }
 

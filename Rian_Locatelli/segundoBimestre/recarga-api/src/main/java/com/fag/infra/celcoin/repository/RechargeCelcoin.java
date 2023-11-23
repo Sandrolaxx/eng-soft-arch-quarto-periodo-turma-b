@@ -67,13 +67,14 @@ public class RechargeCelcoin implements IRechargeVendor {
     public List<ProductDTO> listProducts(Integer operatorId, Integer stateCode) {
         try {
             CelcoinProductsDTO products = restClient.listProducts(getToken(), stateCode, operatorId);
-
-            return products.getProcucts().stream()
+    
+            return products.getProducts().stream()
                     .map(product -> CelcoinProductMapper.toAppDTO(product))
                     .collect(Collectors.toList());
         } catch (Exception e) {
-            // Log
-            throw new RuntimeException("Erro comunicação provedor servico recarga.");
+            
+            throw new RuntimeException("Erro na comunicação com o provedor de serviço de recarga.");
+            
         }
     }
 

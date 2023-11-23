@@ -10,6 +10,7 @@ public class PhoneMapper {
     }
 
     public static PhoneDTO toDTO(PhoneBO bo) {
+        
         PhoneDTO phone = new PhoneDTO();
 
         phone.setCountryCode(bo.getCountryCode());

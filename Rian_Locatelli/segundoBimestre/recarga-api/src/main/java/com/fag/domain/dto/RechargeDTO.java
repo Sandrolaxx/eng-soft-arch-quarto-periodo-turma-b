@@ -18,6 +18,7 @@ public class RechargeDTO {
 
     private boolean success;
 
+    
     public Double getValue() {
         return value;
     }

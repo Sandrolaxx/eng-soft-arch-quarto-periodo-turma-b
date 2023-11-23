@@ -6,6 +6,7 @@ import com.fag.infra.celcoin.dto.CelcoinProductDTO;
 public class CelcoinProductMapper {
 
     public static ProductDTO toAppDTO(CelcoinProductDTO vendorDTO) {
+        
         ProductDTO appDTO = new ProductDTO();
 
         appDTO.setCode(vendorDTO.getCode());

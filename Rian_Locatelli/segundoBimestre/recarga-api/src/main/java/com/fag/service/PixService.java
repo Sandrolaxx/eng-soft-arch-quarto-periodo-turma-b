@@ -1,25 +1,28 @@
 package com.fag.service;
 
 import com.fag.domain.dto.PixDTO;
+import com.fag.domain.repositories.IPixDataBaseRepository;
 import com.fag.domain.usecases.PixCreate;
-import com.fag.infra.mercadopago.repository.MpPixRepository;
-
+import com.fag.infra.celcoin.usecases.CelcoinPix;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import jakarta.ws.rs.core.Response;
 
 @ApplicationScoped
 public class PixService {
+  @Inject
+  CelcoinPix celcoin;
 
-    @Inject
-    MpPixRepository mpPixRepository;
+  @Inject
+  IPixDataBaseRepository panacheRepository;
 
-    public Response genQRCode(PixDTO dto) {
+  @Transactional
+  public Response handlePix(PixDTO dto) {
+    PixCreate pixCreate = new PixCreate(celcoin, panacheRepository);
 
-        PixCreate pixCreate = new PixCreate(mpPixRepository);
+    PixDTO createdPix = pixCreate.execute(dto);
 
-        return Response.ok(pixCreate.execute(dto)).build();
-
-    }
-
+    return Response.ok(createdPix).build();
+  }
 }

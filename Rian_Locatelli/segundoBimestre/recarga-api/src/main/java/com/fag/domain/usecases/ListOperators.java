@@ -7,14 +7,18 @@ import com.fag.domain.repositories.IRechargeVendor;
 
 public class ListOperators {
 
-    private IRechargeVendor vendor;
+  private IRechargeVendor rechargeVendor;
 
-    public ListOperators(IRechargeVendor vendor) {
-        this.vendor = vendor;
-    }
+  public ListOperators(IRechargeVendor vendor) {
+    
+    this.rechargeVendor = vendor;
+    
+  }
 
-    public List<OperatorDTO> execute(Integer stateCode, Integer category) {
-        return vendor.listOperators(stateCode, category);
-    }
+  public List<OperatorDTO> execute(Integer stateCode, Integer category) {
+    
+    return rechargeVendor.listOperators(stateCode, category);
+
+  }
 
 }

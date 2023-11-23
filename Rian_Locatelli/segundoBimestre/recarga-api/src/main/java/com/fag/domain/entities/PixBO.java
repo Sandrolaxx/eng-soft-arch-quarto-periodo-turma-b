@@ -1,87 +1,64 @@
 package com.fag.domain.entities;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class PixBO {
-
+    
     private UUID id;
+    
+    private String key;
+    
+    private Double amount;
+    
+    private String qrCode;
+    
+    private Long transactionId;
 
-    private BigDecimal amount;
-
-    private String email;
-
-    private String description;
-
-    private String emv;
-
-    private String base64;
-
-    private LocalDateTime expiration;
-
-    public PixBO(String id, BigDecimal amount, String email,
-            String description, String emv, String base64,
-            LocalDateTime expiration) {
-        this.id = id != null ? UUID.fromString(id) : UUID.randomUUID();
+    public PixBO(UUID id, String key, Double amount, String qrCode, Long transactionId) {
+        this.id = id != null ? id : UUID.randomUUID();
+        this.key = key;
         this.amount = amount;
-        this.email = email;
-        this.description = description;
-        this.emv = emv;
-        this.base64 = base64;
-        this.expiration = expiration;
-
-        validate();
-    }
-
-    //Criar validações
-    private void validate() {
-        if (this.base64 == null) {
-            throw new RuntimeException("Campo obrigatório - Base64");
-        }
-
-        if (this.emv == null || this.emv.isEmpty()) {
-            throw new RuntimeException("Campo obrigatório - emv");
-        }
-
-        if (this.expiration == null) {
-            throw new RuntimeException("Campo obrigatório - Expiration");
-        }
-    }
-
-    public void updateQRCode(String emv, String base64,
-            LocalDateTime expiration) {
-        this.base64 = base64;
-        this.emv = emv;
-        this.expiration = expiration;
+        this.qrCode = qrCode;
+        this.transactionId = transactionId;
     }
 
     public UUID getId() {
         return id;
     }
 
-    public BigDecimal getAmount() {
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public Double getAmount() {
         return amount;
     }
 
-    public String getEmail() {
-        return email;
+    public void setAmount(Double amount) {
+        this.amount = amount;
     }
 
-    public String getDescription() {
-        return description;
+    public String getQrCode() {
+        return qrCode;
     }
 
-    public String getEmv() {
-        return emv;
+    public void setQrCode(String qrCode) {
+        this.qrCode = qrCode;
     }
 
-    public String getBase64() {
-        return base64;
+    public Long getTransactionId() {
+        return transactionId;
     }
 
-    public LocalDateTime getExpiration() {
-        return expiration;
+    public void setTransactionId(Long transactionId) {
+        this.transactionId = transactionId;
     }
-
 }

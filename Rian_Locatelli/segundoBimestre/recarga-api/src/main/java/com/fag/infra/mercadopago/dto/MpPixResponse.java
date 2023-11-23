@@ -2,16 +2,16 @@ package com.fag.infra.mercadopago.dto;
 
 import jakarta.json.bind.annotation.JsonbProperty;
 
-public class MpPixResponse {
+public class MPPixResponse {
     
     @JsonbProperty("point_of_interaction")
-    private MpPixPoiDTO poi;
+    private MPPixPoiDTO poi;
 
-    public MpPixPoiDTO getPoi() {
+    public MPPixPoiDTO getPoi() {
         return poi;
     }
 
-    public void setPoi(MpPixPoiDTO poi) {
+    public void setPoi(MPPixPoiDTO poi) {
         this.poi = poi;
     }
 

@@ -7,6 +7,7 @@ import com.fag.infra.celcoin.dto.CelcoinRechargeValueDTO;
 public class CelcoinRechargeMapper {
 
     public static CelcoinRechargeDTO toVendorDTO(RechargeDTO appDTO) {
+        
         CelcoinRechargeDTO vendorDTO = new CelcoinRechargeDTO();
         CelcoinRechargeValueDTO topUpData = new CelcoinRechargeValueDTO();
 

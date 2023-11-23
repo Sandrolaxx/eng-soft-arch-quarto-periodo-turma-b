@@ -6,6 +6,7 @@ import com.fag.infra.celcoin.dto.CelcoinPhoneDTO;
 public class CelcoinRechargePhoneMapper {
 
     public static PhoneDTO toAppDTO(CelcoinPhoneDTO vendorDTO) {
+        
         PhoneDTO appDTO = new PhoneDTO();
 
         appDTO.setStateCode(vendorDTO.getStateCode());
@@ -16,6 +17,7 @@ public class CelcoinRechargePhoneMapper {
     }
 
     public static CelcoinPhoneDTO toVendorDTO(PhoneDTO appDTO) {
+        
         CelcoinPhoneDTO vendorDTO = new CelcoinPhoneDTO();
 
         vendorDTO.setStateCode(appDTO.getStateCode());

@@ -3,28 +3,25 @@ package com.fag.domain.usecases;
 import com.fag.domain.dto.PixDTO;
 import com.fag.domain.entities.PixBO;
 import com.fag.domain.mappers.PixMapper;
-import com.fag.domain.repositories.IPixRepository;
+import com.fag.domain.repositories.IPixDataBaseRepository;
+import com.fag.domain.repositories.IPixVendor;
 
 public class PixCreate {
+  private IPixVendor pixVendor;
+  private IPixDataBaseRepository dataBaseRepository;
 
-    private IPixRepository pixRepo;
+  public PixDTO execute(PixDTO dto) {
+    PixBO bo = PixMapper.toBO(dto);
 
-    public PixCreate(IPixRepository pixRepo) {
-        this.pixRepo = pixRepo;
-    }
+    PixDTO response = pixVendor.create(dto);
 
-    public PixDTO execute(PixDTO dto) {
-        PixBO bo = PixMapper.toBO(dto);
+    dataBaseRepository.persist(bo);
 
-        PixDTO createdPixDTO = pixRepo.create(dto);
+    return response;
+  }
 
-        bo.updateQRCode(createdPixDTO.getEmv(),
-                createdPixDTO.getBase64(),
-                createdPixDTO.getExpiration());
-
-        // databaserepo.persit(bo);
-
-        return PixMapper.toDTO(bo);
-    }
-
+  public PixCreate(IPixVendor pixVendor, IPixDataBaseRepository dataBaseRepository) {
+    this.pixVendor = pixVendor;
+    this.dataBaseRepository = dataBaseRepository;
+  }
 }

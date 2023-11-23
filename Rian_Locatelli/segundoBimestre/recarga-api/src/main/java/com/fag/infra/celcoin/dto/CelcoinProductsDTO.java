@@ -7,14 +7,13 @@ import jakarta.json.bind.annotation.JsonbProperty;
 public class CelcoinProductsDTO {
 
     @JsonbProperty("value")
-    private List<CelcoinProductDTO> procucts;
+    private List<CelcoinProductDTO> products;
 
-    public List<CelcoinProductDTO> getProcucts() {
-        return procucts;
+    public List<CelcoinProductDTO> getProducts() {
+        return products;
     }
 
-    public void setProcucts(List<CelcoinProductDTO> procucts) {
-        this.procucts = procucts;
+    public void setProducts(List<CelcoinProductDTO> products) {
+        this.products = products;
     }
-
 }

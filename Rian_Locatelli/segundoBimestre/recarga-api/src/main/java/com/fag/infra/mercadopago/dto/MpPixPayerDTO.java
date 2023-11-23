@@ -1,6 +1,6 @@
 package com.fag.infra.mercadopago.dto;
 
-public class MpPixPayerDTO {
+public class MPPixPayerDTO {
     
     private String email;
 
