@@ -16,10 +16,9 @@ public class PixController {
     PixService service;
 
     @POST
-    @Path("/pix")
+    @Path("/pix/mp")
     @Produces(MediaType.APPLICATION_JSON)
     public PixDTO create(PixDTO dto) {
         return service.genPix(dto);
     }
-    
 }

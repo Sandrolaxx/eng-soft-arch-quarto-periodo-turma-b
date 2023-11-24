@@ -9,15 +9,15 @@ import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class PixService {
-    
+
     @Inject
     MpPixRepository mpPixRepository;
 
     public PixDTO genPix(PixDTO dto) {
 
         CreatePix createPix = new CreatePix(mpPixRepository);
-
+        dto = createPix.execute(dto);
         return createPix.execute(dto);
-    }
 
+    }
 }

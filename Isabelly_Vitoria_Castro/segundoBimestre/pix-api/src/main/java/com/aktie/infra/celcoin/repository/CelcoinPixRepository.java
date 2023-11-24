@@ -1,0 +1,47 @@
+package com.aktie.infra.celcoin.repository;
+
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+
+import com.aktie.domain.dto.CPixDTO;
+import com.aktie.domain.repositories.IVendorRepository;
+import com.aktie.infra.celcoin.dto.CelcoinPixDTO;
+import com.aktie.infra.celcoin.dto.CelcoinResponseDTO;
+import com.aktie.infra.celcoin.dto.CelcoinTokenDTO;
+import com.aktie.infra.celcoin.mapper.CelcoinPixMapper;
+
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.core.Form;
+
+@ApplicationScoped
+public class CelcoinPixRepository implements IVendorRepository {
+
+    @Inject
+    @RestClient
+    RestClientCelcoin restClient;
+
+    @Override
+    public CPixDTO create(CPixDTO pix) {
+        CelcoinPixDTO pixDTO = CelcoinPixMapper.toVendorDTO(pix);
+
+        CelcoinResponseDTO response = restClient.handlePix(getToken(), pixDTO);
+
+        pix.setQrCode(response.getQrCode());
+        pix.setTransactionId(response.getTransactionId());
+
+        return pix;
+    }
+
+    private String getToken() {
+        Form form = new Form();
+
+        form.param("client_id", "41b44ab9a56440.teste.celcoinapi.v5");
+        form.param("grant_type", "client_credentials");
+        form.param("client_secret", "e9d15cde33024c1494de7480e69b7a18c09d7cd25a8446839b3be82a56a044a3");
+
+        CelcoinTokenDTO tokenDTO = restClient.generateToken(form);
+        String token = "Bearer " + tokenDTO.getAccessToken();
+
+        return token;
+    }
+}
