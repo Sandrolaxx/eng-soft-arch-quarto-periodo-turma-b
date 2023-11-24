@@ -1,11 +1,11 @@
 package com.fag.infra.celcoin.mappers;
 
 import com.fag.domain.dto.OperatorDTO;
-import com.fag.infra.celcoin.dto.CelcoinOperatorDTO;
+import com.fag.infra.celcoin.dto.CelOperatorDTO;
 
 public class CelcoinOperatorMapper {
 
-    public static OperatorDTO toAppDTO(CelcoinOperatorDTO vendorDTO) {
+    public static OperatorDTO toAppDTO(CelOperatorDTO vendorDTO) {
         OperatorDTO appDTO = new OperatorDTO();
 
         appDTO.setCategory(vendorDTO.getCategory());

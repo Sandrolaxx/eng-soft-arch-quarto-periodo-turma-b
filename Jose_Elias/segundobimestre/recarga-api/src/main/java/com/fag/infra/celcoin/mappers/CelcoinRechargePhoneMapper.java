@@ -1,11 +1,11 @@
 package com.fag.infra.celcoin.mappers;
 
 import com.fag.domain.dto.PhoneDTO;
-import com.fag.infra.celcoin.dto.CelcoinPhoneDTO;
+import com.fag.infra.celcoin.dto.CelPhoneDTO;
 
 public class CelcoinRechargePhoneMapper {
 
-    public static PhoneDTO toAppDTO(CelcoinPhoneDTO vendorDTO) {
+    public static PhoneDTO toAppDTO(CelPhoneDTO vendorDTO) {
         PhoneDTO appDTO = new PhoneDTO();
 
         appDTO.setStateCode(vendorDTO.getStateCode());
@@ -15,8 +15,8 @@ public class CelcoinRechargePhoneMapper {
         return appDTO;
     }
 
-    public static CelcoinPhoneDTO toVendorDTO(PhoneDTO appDTO) {
-        CelcoinPhoneDTO vendorDTO = new CelcoinPhoneDTO();
+    public static CelPhoneDTO toVendorDTO(PhoneDTO appDTO) {
+        CelPhoneDTO vendorDTO = new CelPhoneDTO();
 
         vendorDTO.setStateCode(appDTO.getStateCode());
         vendorDTO.setCountryCode(appDTO.getCountryCode());

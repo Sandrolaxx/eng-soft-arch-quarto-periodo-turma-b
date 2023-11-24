@@ -9,12 +9,11 @@ import java.time.LocalDateTime;
  */
 public class PixDTO {
     private String id;
-    private BigDecimal amount;
-    private String email;
-    private String description;
-    private String emv;
-    private String base64;
-    private LocalDateTime expiration;
+  private String key;
+  private Double amount;
+  private String qrCode;
+  private MerchantDTO merchant;
+  private Long transactionId;
 
     public String getId() {
         return id;
@@ -24,53 +23,47 @@ public class PixDTO {
         this.id = id;
     }
 
-    public BigDecimal getAmount() {
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(BigDecimal amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 
-    public String getEmail() {
-        return email;
+    public String getQrCode() {
+        return qrCode;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setQrCode(String qrCode) {
+        this.qrCode = qrCode;
     }
 
-    public String getDescription() {
-        return description;
+    public MerchantDTO getMerchant() {
+        return merchant;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setMerchant(MerchantDTO merchant) {
+        this.merchant = merchant;
     }
 
-    public String getEmv() {
-        return emv;
+    public Long getTransactionId() {
+        return transactionId;
     }
 
-    public void setEmv(String emv) {
-        this.emv = emv;
+    public void setTransactionId(Long transactionId) {
+        this.transactionId = transactionId;
     }
 
-    public String getBase64() {
-        return base64;
-    }
-
-    public void setBase64(String base64) {
-        this.base64 = base64;
-    }
-
-    public LocalDateTime getExpiration() {
-        return expiration;
-    }
-
-    public void setExpiration(LocalDateTime expiration) {
-        this.expiration = expiration;
-    }
+    
     
     
 }

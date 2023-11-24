@@ -1,19 +1,13 @@
 package com.fag.domain.dto;
 
 public class OperatorDTO {
-
     private Integer category;
-
     private Integer rechargeType;
-
     private String name;
-
     private Integer providerId;
-
     private Double maxValue;
-
     private Double minValue;
-
+    
     public Integer getCategory() {
         return category;
     }

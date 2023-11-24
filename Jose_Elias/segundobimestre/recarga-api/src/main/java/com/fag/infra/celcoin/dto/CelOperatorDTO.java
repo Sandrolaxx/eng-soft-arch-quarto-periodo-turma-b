@@ -2,7 +2,7 @@ package com.fag.infra.celcoin.dto;
 
 import jakarta.json.bind.annotation.JsonbProperty;
 
-public class CelcoinOperatorDTO {
+public class CelOperatorDTO {
 
     private Integer category;
 

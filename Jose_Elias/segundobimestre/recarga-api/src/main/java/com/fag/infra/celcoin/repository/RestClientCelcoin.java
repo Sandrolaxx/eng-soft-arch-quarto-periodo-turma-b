@@ -2,7 +2,7 @@ package com.fag.infra.celcoin.repository;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import com.fag.infra.celcoin.dto.CelcoinOperatorsDTO;
+import com.fag.infra.celcoin.dto.CelOperatorsDTO;
 import com.fag.infra.celcoin.dto.CelcoinProductsDTO;
 import com.fag.infra.celcoin.dto.CelcoinRechargeDTO;
 import com.fag.infra.celcoin.dto.CelcoinRechargeResponseDTO;
@@ -29,7 +29,7 @@ public interface RestClientCelcoin {
     
     @GET
     @Path("/v5/transactions/topups/providers")
-    CelcoinOperatorsDTO listOperators(@HeaderParam("Authorization") String token,
+    CelOperatorsDTO listOperators(@HeaderParam("Authorization") String token,
             @QueryParam("stateCode") Integer stateCode, @QueryParam("category") Integer category);
 
     @GET

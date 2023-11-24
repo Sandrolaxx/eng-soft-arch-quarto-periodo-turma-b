@@ -6,7 +6,7 @@ public class CelcoinRechargeDTO {
 
     private Integer providerId;
 
-    private CelcoinPhoneDTO phone;
+    private CelPhoneDTO phone;
 
     private CelcoinRechargeValueDTO topupData;
 
@@ -26,11 +26,11 @@ public class CelcoinRechargeDTO {
         this.providerId = providerId;
     }
 
-    public CelcoinPhoneDTO getPhone() {
+    public CelPhoneDTO getPhone() {
         return phone;
     }
 
-    public void setPhone(CelcoinPhoneDTO phone) {
+    public void setPhone(CelPhoneDTO phone) {
         this.phone = phone;
     }
 

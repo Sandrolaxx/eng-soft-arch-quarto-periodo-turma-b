@@ -4,12 +4,19 @@
  */
 package com.fag.infra.celcoin.usecases;
 
+import com.fag.domain.dto.PixDTO;
+import com.fag.infra.celcoin.repository.PixVendor;
+import com.fag.infra.celcoin.repository.RestClientCelcoin;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+
 /**
  *
  * @author molin
  */
 @ApplicationScoped
-public class PixCelcoin implements PixVendor {
+public class PixCel implements PixVendor {
 
   @Inject
   @RestClient

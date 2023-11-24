@@ -1,6 +1,6 @@
 package com.fag.infra.celcoin.dto;
 
-public class CelcoinPhoneDTO {
+public class CelPhoneDTO {
 
     private Integer stateCode;
 
