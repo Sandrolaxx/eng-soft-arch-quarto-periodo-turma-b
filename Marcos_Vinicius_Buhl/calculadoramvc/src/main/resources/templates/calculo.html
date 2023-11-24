@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora MVC</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .quadrado {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .titulo {
+            margin: 0;
+            padding: 0;
+        }
+
+        .resultado {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .quadrado {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado">
+        <h1 class="titulo">Resultado:</h1>
+        <h1 class="resultado"><b>{resultado}</b></h1>
+    </div>
+</body>
+</html>

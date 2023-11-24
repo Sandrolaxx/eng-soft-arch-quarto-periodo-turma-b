@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Calculadora </title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+b {
+    font-size: 24px;
+}
+
+form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+<h1><b>{result ?: "Esperando resultado"}</b></h1>
+<form action="/calculadora" method="post">
+    <label for="num1">Primeiro número</label><br>
+    <input type="text" id="num1" name="num1"><br>
+    <label for="num2">Segundo número</label><br>
+    <input type="text" id="num2" name="num2">
+    <select name="operacao" id="operacao">
+        <option value="soma">+</option>
+        <option value="sub">-</option>
+        <option value="div">/</option>
+        <option value="mult">*</option>
+      </select>
+    <button>
+        Calcular
+    </button>
+
+</form>
+</body>
+</html>

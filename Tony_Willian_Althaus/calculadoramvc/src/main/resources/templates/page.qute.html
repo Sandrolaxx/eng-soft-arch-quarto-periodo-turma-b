@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {name ?: "Qute"}</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main {
+    background-color: #fff;
+    padding: 45px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <form action="/calculadora" method="POST">
+        <div id="main">
+            <h1>Calculadora</h1>
+            <input type="number" name="valor1" placeholder="Primeiro valor"><br>
+            <input type="number" name="valor2" placeholder="Segundo valor"><br>
+            <h3>Selecione a operação</h3>
+            <select name="operacao">
+                <option value="+">Adição</option>
+                <option value="-">Subtração</option>
+                <option value="*">Multiplicação</option>
+                <option value="/">Divisão</option>
+            </select><br>
+            <button type="submit">Calcular</button><br>
+            <h2>Resultado: {resultado}</h2>
+        </div>
+    </form>
+    
+</body>
+</html>

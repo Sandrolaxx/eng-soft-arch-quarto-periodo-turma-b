@@ -1,4 +1,4 @@
-package calculadora;
+package org.acme.model;
 import java.util.*;
 
 public class Main {

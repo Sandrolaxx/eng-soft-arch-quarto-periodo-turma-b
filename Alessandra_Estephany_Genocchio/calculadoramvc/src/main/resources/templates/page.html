@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(137deg, rgb(139 136 189) 0%, rgba(229, 41, 145, 1) 50%, rgb(157 192 199) 110%);
+    }
+
+    .container-box {
+        width: 300px;
+        height: 250px;
+        text-align: center;
+        background-color: #F0F8FF;
+        border-radius: 10px;
+        padding: 30px 10px 15px 10px;
+    }
+
+    input,select,button{
+        margin: 10px 20px 10px 20px;
+        width: 230px;
+        height: 30px;
+        border: 0.5px solid gray;
+        boder:none;
+        border-radius: 5px;
+        font-size: 12px;
+        cursor:pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: background-color 0.3s ease;
+    }
+    input,select,button,label:focus {
+        outline:none;
+    }
+
+    label{
+        font-size:13px;
+        color:#ac287b;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight:bold;
+    }
+    button{
+        margin-top:20px;
+        border-radius: 5px;
+        height:30px;
+        background-color: #ffff;
+        font-weight:bold;
+    }
+    select{
+        height:25px;
+    }
+    button:hover{
+        background-color:#06748E;
+        color:white;
+    }
+    input:hover{
+        border: 2px solid #06748E;
+    }
+    .logo{
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        margin:-20px 0 0 280px;
+        animation: loading 3s forwards infinite;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    p{
+        color: white;
+        margin: 0;
+        font-size: 20px;
+    }
+
+</style>
+<body>
+<form method="post" action="/result">
+    <div class="container">
+        <img class="logo" src="https://i.imgur.com/RwqQtcy.png" alt="Logo curso Eng. Software FAG"/>
+        <div class="container-box">
+            <label> Insira o primeiro número </label>
+            <input type="text" name="valor1">
+            <label> Insira o segundo número </label>
+            <input type="text" name="valor2">
+            <select id="operador" name="operador" class="text">
+                <option value="soma"> Soma </option>
+                <option value="substracao"> Subtração </option>
+                <option value="divisao"> Divisão </option>
+                <option value="multiplicacao"> Multiplicação</option>
+            </select>
+            <button>Calcular</button>
+        </div>
+    </div>
+</form>
+
+</body>
+
+</html>

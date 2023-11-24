@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Quarkus</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #838383;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            font-size: 20px;
+            color: #00ff0d;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00b327;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/calculadora" method="post">
+        <h1>Resultado {resultado ?: "Nada ainda"}</h1>
+        <label for="valor1">Valor 1:</label><br>
+        <input type="text" id="valor1" name="valor1"><br>
+        <label for="valor2">Valor 2</label><br>
+        <input type="text" id="valor2" name="valor2">
+        <select name="tipo" id="tipo">
+            <option value="soma">+</option>
+            <option value="subtracao">-</option>
+            <option value="multiplicacao">*</option>
+            <option value="divisao">/</option>
+        </select>
+        <button>
+            Calcular
+        </button>
+    </form>
+</body>
+
+</html>

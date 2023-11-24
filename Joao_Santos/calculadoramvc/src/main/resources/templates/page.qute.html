@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Quarkus</title>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/vetores-premium/numero-monocromatico-sem-costura-com-padrao-de-pontos-brilhantes-em-fundo-laranja_3119-300.jpg?w=826");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        #content {
+            background-color: rgba(217, 238, 236, 0.952); 
+            padding: 20px; 
+            border-radius: 20px; 
+            text-align: center; 
+        }
+
+        h1 {
+            color: #24b32b;
+            font-size: 50px;
+            
+        }
+
+        h1 b {
+            color: #8820b8;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: bold;
+            color: #794ec9;
+            background-color:
+        }
+
+        button {
+            font-size: 30px;
+            font-weight: bold;
+            color: #198a1f;
+        }
+
+        label {
+            font-size: 35px;
+            font-weight: 700;
+            color: #198a1f;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>RESULTADO: <b>{resultado ?: " Insira os valores "}</b></h1>
+
+        <p id="subtitle">Insira os valores abaixo para realizar o cálculo desejado</p>
+
+        <form action="/calculadora" method="post">
+            <label for="valor1">Digite o primeiro valor:</label>
+            <input type="number" id="valor1" name="valor1" style="width: 225px; height: 25px">
+            <br><br>
+            <label for="valor2">Digite o segundo valor:</label>
+            <input type="number" id="valor2" name="valor2" style="width: 225px; height: 25px">
+            <br><br>
+            <select name="operador" style="width: 150px; height: 50px; font-size: 25px; color: #794ec9;">
+                <option>Soma</option>
+                <option>Subtração</option>
+                <option>Multiplicação</option>
+                <option>Divisão</option>
+            </select>
+            <br><br>
+            <button type="submit" style="width: 150px; height: 50px">
+                Calcular
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>

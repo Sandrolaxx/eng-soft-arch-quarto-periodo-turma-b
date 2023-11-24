@@ -11,21 +11,29 @@
     </style>
 </head>
 <body>
-    <form action="/calc" method="POST">
-        <div id="main">
-            <h1>Calculadora</h1>
-            <input type="number" name="valor1" placeholder="1º valor"><br>
-            <input type="number" name="valor2" placeholder="2º valor"><br>
-            <h3>Selecione a operação</h3>
-            <select name="operacao">
-                <option value="+">Adição</option>
-                <option value="-">Subtração</option>
-                <option value="*">Multiplicação</option>
-                <option value="/">Divisão</option>
-            </select><br>
-            <button type="submit">Calcular</button><br>
-            <h2>Resultado: {result}</h2>
-        </div>
-    </form>
+    <div id="formulario" style="display: {res1};">
+        <form action="/resultado" method="POST">
+            <div id="main">
+                <h1>Calculadora</h1>
+                <input type="number" name="valor1" placeholder="1º valor"><br>
+                <input type="number" name="valor2" placeholder="2º valor"><br>
+                <h3>Selecione a operação</h3>
+                <select name="op">
+                    <option value="+">Adição</option>
+                    <option value="-">Subtração</option>
+                    <option value="*">Multiplicação</option>
+                    <option value="/">Divisão</option>
+                </select><br>
+                <button type="submit">Calcular</button><br>
+                
+            </div>
+        </form>
+    </div>
+    <div style="display: {res2};">
+        <h2>Resultado: {resultado}</h2>
+        <form action="/" method="get">
+            <button type="submit">voltar</button>
+        </form>
+    </div>
 </body>
 </html>

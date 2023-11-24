@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculadoraMVC Atualizada 3000</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .calculator {
+        width: 300px;
+        background-color: #222;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 5px;
+        color: #ddd;
+    }
+
+    input,
+    select,
+    button {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #555;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #444;
+        color: #ddd;
+    }
+
+    button {
+        background-color: #ff00dd;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #510161;
+    }
+
+    .error {
+        margin-top: 20px;
+        text-align: center;
+        color: #ff2f00;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #ddd;
+    }
+
+    #resultado {
+        font-size: 24px;
+        color: #ddd;
+    }
+</style>
+
+<body>
+    <div class="calculator">
+        <form action="/calculadora" method="post">
+            <label for="valor1">Valor 1:</label>
+            <input type="number" name="valor1" id="valor1" required>
+            <label for="valor2">Valor 2:</label>
+            <input type="number" name="valor2" id="valor2" required>
+            <label for="tipo">Operação:</label>
+            <select name="tipo" id="tipo" required>
+                <option value="soma">Soma</option>
+                <option value="subtracao">Subtração</option>
+                <option value="multiplicacao">Multiplicação</option>
+                <option value="divisao">Divisão</option>
+            </select>
+            <button type="submit">Calcular</button>
+        </form>
+        <div class="error">
+            <p id="mensagemErro">{mensagemErro}</p>
+        </div>
+        <div class="result">
+            <p id="resultado">{resultado}</p>
+        </div>
+    </div>
+</body>
+
+</html>

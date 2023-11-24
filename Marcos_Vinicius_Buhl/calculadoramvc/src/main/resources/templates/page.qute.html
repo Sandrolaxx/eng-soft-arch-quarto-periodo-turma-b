@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do calculo</title>
+</head>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculadora {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .titulo {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .entrada-valor1,
+        .entrada-valor2 {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            color: #ccc;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .valor {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        select.operacao {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .botao {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .textopreto{
+            color:black;
+        }
+        @media screen and (max-width: 768px) {
+            .calculadora {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/some-page/calcular" method="post">
+        <div class="calculadora">
+            <h1 class="titulo">Calculadora</h1>
+        </div>
+
+        <div class="entrada-valor1">
+            <label for="numero1" class="textopreto">Digite o primeiro número</label>
+            <input type="text" name="numero1" max="100" placeholder="Número 1" class="valor"><br>
+        </div>
+
+        <div class="entrada-valor2">
+            <label for="numero2" class="textopreto">Digite o segundo número</label>
+            <input type="text" name="numero2" max="100" placeholder="Número 2" class="valor"><br>
+        </div>
+
+        <select name="opera" class="operacao">
+            <option value="multiplica">Multiplicação</option>
+            <option value="divide">Divisão</option>
+            <option value="soma">Soma</option>
+            <option value="subtrai">Subtração</option>
+        </select><br>
+
+        <div class="botao">
+            <input type="submit" value="Calcular">
+        </div>
+    </form>
+</body>
+
+</html>

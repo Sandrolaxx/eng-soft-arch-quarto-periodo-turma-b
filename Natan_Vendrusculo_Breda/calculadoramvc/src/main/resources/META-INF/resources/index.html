@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {name ?: "Qute"}</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        h1 {
+            color: #4695EB;
+            font-size: 6vw;
+        }
+
+        h1 b {
+            color: #be9100;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+    </style>
+</head>
+<body>
+<h1>Calculadora <b></b></h1>
+<form action="/calculator" method="post">
+<label>Valor1</label>
+<br>
+<input name="Valor1" type="number" id="v1" placeholder="Valor 1">
+<br>
+<select name="operador" id="op">
+    <option value="add">+</option>
+    <option value="subtract">-</option>
+    <option value="divide">/</option>
+    <option value="multiplication">*</option>
+</select>
+<br>
+<label>Valor2</label>
+<br>
+<input name="Valor2" type="number" id="v2" placeholder="valor 2">
+
+<button>calcular</button>
+
+<p><b placeholder="result"></b></p>
+
+</form>
+</body>
+</html>

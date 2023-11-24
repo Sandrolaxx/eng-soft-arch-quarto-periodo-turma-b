@@ -15,9 +15,9 @@ public class SomePage {
 
     private final Template calculator;
 
-    public SomePage(Template page) {
+    public SomePage(Template calculator) {
 
-        this.calculator = requireNonNull(page, "page is required");
+        this.calculator = requireNonNull(calculator, "page is required");
 
     }
 
