@@ -1,4 +1,4 @@
-package com.fag.presentation.controllers;
+package com.fag.infra.panache.controllers;
 
 import com.fag.domain.dto.RechargeDTO;
 import com.fag.service.RechargeService;
