@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora MVC Flavio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #bf00d8;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: #000000;
+            font-size: 28px;
+        }
+        h3{
+            color: #000000;
+        }
+
+        label {
+            font-size: 30px;
+            color: #000000;
+        }
+
+        input {
+            width: 320px;
+            height: 35px;
+            background-color: rgb(234, 234, 234);
+            border-radius: 10px;
+        }
+
+        form {
+            width: 350px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 250px;
+            height: 35px;
+            background-color: #000000;
+            color: #e3e3e3;
+            border-radius: 10px;
+        }
+
+        select {
+            width: 250px;
+            height: 35px;
+            background-color: #757575;
+            color: #000000;
+            border-radius: 10px;
+        }
+
+        .result {
+            padding-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/CalculadoraMVCFlavio" method="post">
+        <div>
+            <h2>Calculadora MVC Flavio</h2>
+        </div>
+        <br>
+        <div>
+            <label>
+                Numero 1
+            </label>
+        </div>
+
+        <div>
+            <input type="number" name="numero1" required>
+        </div>
+
+        <div>
+            <label>
+                Numero 2
+            </label>
+        </div>
+        <div>
+            <input type="number" name="numero2" required>
+        </div>
+
+        <br>
+
+        <div>
+            <select name="operacao">
+                <option>
+                    Soma
+                </option>
+                <option>
+                    Sub
+                </option>
+                <option>
+                    Mult
+                </option>
+                <option>
+                    Div
+                </option>
+            </select>
+        </div>
+
+        <br>
+        <div>
+            <button>
+                Calcular
+            </button>
+        </div>
+        <div>
+            <h3>Mensagem: <b>{mensagem ?: "Insira um número"}</h3>
+        </div>
+    </form>
+</body>
+
+</html>
