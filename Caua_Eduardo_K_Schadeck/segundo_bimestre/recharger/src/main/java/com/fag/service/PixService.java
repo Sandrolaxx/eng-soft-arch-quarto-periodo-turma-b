@@ -1,8 +1,8 @@
 package com.fag.service;
 
 import com.fag.domain.dto.PixDTO;
-import com.fag.domain.repositories.IPixDatabaseRepository;
-import com.fag.domain.useCases.CreatePix;
+import com.fag.domain.repositories.IPixDataBaseRepository;
+import com.fag.domain.usecases.CreatePix;
 import com.fag.infra.celcoin.usecases.PixCelcoin;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -15,7 +15,7 @@ public class PixService {
   PixCelcoin celcoin;
 
   @Inject
-  IPixDatabaseRepository panacheRepo;
+  IPixDataBaseRepository panacheRepo;
 
   @Transactional
   public Response handlePix(PixDTO dto) {

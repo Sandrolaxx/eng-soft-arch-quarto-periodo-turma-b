@@ -23,7 +23,7 @@ public class PixCelcoin implements IPixVendor {
   @Override
   public PixDTO create(PixDTO pix) {
     CelcoinPixDTO pixDTO = CelcoinPixMapper.toVendorDTO(pix);
-
+    System.out.println(pixDTO);
     CelcoinPixResponseDTO response = restClient.handlePix(getToken(), pixDTO);
 
     pix.setQrCode(response.getQrCode());
@@ -41,7 +41,7 @@ public class PixCelcoin implements IPixVendor {
 
     CelcoinTokenDTO tokenDTO = restClient.generateToken(form);
     String token = "Bearer " + tokenDTO.getAccessToken();
-
+    System.out.println(token);
     return token;
   }
 
