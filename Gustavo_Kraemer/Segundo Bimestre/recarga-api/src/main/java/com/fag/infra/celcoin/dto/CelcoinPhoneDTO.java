@@ -1,35 +1,32 @@
 package com.fag.infra.celcoin.dto;
 
 public class CelcoinPhoneDTO {
+  private Integer stateCode;
+  private Integer countryCode;
+  private String number;
 
-    private Integer stateCode;
+  public Integer getStateCode() {
+    return stateCode;
+  }
 
-    private Integer countryCode;
+  public void setStateCode(Integer stateCode) {
+    this.stateCode = stateCode;
+  }
 
-    private String number;
+  public Integer getCountryCode() {
+    return countryCode;
+  }
 
-    public Integer getStateCode() {
-        return stateCode;
-    }
+  public void setCountryCode(Integer countryCode) {
+    this.countryCode = countryCode;
+  }
 
-    public void setStateCode(Integer stateCode) {
-        this.stateCode = stateCode;
-    }
+  public String getNumber() {
+    return number;
+  }
 
-    public Integer getCountryCode() {
-        return countryCode;
-    }
-
-    public void setCountryCode(Integer countryCode) {
-        this.countryCode = countryCode;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
+  public void setNumber(String number) {
+    this.number = number;
+  }
 
 }

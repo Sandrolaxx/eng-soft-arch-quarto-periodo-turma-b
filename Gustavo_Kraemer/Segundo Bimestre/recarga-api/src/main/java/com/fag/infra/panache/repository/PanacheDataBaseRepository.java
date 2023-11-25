@@ -10,13 +10,13 @@ import jakarta.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class PanacheDataBaseRepository implements IRechargeDataBaseRepository {
 
-    @Override
-    public RechargeBO persist(RechargeBO bo) {
-        PanacheRecharge entity = PanacheRechargeMapper.toEntity(bo);
+  @Override
+  public RechargeBO persist(RechargeBO bo) {
+    PanacheRecharge entity = PanacheRechargeMapper.toEntity(bo);
 
-        entity.persistAndFlush();
+    entity.persistAndFlush();
 
-        return PanacheRechargeMapper.toDomain(entity);
-    }
+    return PanacheRechargeMapper.toDomain(entity);
+  }
 
 }

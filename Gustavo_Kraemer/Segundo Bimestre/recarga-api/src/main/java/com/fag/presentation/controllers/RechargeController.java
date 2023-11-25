@@ -3,6 +3,7 @@ package com.fag.presentation.controllers;
 import com.fag.domain.dto.RechargeDTO;
 import com.fag.service.RechargeService;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.HeaderParam;
@@ -12,9 +13,9 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/v1/recharge")
+@ApplicationScoped
+@Path("v1/recharge")
 public class RechargeController {
-
     @Inject
     RechargeService service;
 
@@ -29,9 +30,9 @@ public class RechargeController {
     @GET
     @Path("/products")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response listProducs(@HeaderParam("stateCode") Integer stateCode,
+    public Response listProducts(@HeaderParam("stateCode") Integer stateCode,
             @HeaderParam("operatorId") Integer operatorId) {
-        return service.listProducs(stateCode, operatorId);
+        return service.listProducts(stateCode, operatorId);
     }
 
     @POST
@@ -39,5 +40,4 @@ public class RechargeController {
     public Response handleRecharge(RechargeDTO dto) {
         return service.handleRecharge(dto);
     }
-
 }

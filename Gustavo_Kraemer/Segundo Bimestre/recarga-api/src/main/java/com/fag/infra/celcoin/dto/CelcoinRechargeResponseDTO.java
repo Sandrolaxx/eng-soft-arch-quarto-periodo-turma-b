@@ -1,105 +1,95 @@
 package com.fag.infra.celcoin.dto;
 
 public class CelcoinRechargeResponseDTO {
+  private Integer nsuNameProvider;
+  private Integer authentication;
+  private CelcoinRechargeReceiptDTO receipt;
+  private String settleDate;
+  private String createDate;
+  private Long transactionId;
+  private String urlreceipt;
+  private String errorCode;
+  private String message;
+  private Integer status;
 
-    private Integer nsuNameProvider;
+  public Integer getNsuNameProvider() {
+    return nsuNameProvider;
+  }
 
-    private Integer authentication;
+  public void setNsuNameProvider(Integer nsuNameProvider) {
+    this.nsuNameProvider = nsuNameProvider;
+  }
 
-    private CelcoinRechargeReceiptDTO receipt;
+  public Integer getAuthentication() {
+    return authentication;
+  }
 
-    private String settleDate;
+  public void setAuthentication(Integer authentication) {
+    this.authentication = authentication;
+  }
 
-    private String createDate;
+  public CelcoinRechargeReceiptDTO getReceipt() {
+    return receipt;
+  }
 
-    private Long transactionId;
+  public void setReceipt(CelcoinRechargeReceiptDTO receipt) {
+    this.receipt = receipt;
+  }
 
-    private String urlreceipt;
+  public String getSettleDate() {
+    return settleDate;
+  }
 
-    private String errorCode;
+  public void setSettleDate(String settleDate) {
+    this.settleDate = settleDate;
+  }
 
-    private String message;
+  public String getCreateDate() {
+    return createDate;
+  }
 
-    private Integer status;
+  public void setCreateDate(String createDate) {
+    this.createDate = createDate;
+  }
 
-    public Integer getNsuNameProvider() {
-        return nsuNameProvider;
-    }
+  public Long getTransactionId() {
+    return transactionId;
+  }
 
-    public void setNsuNameProvider(Integer nsuNameProvider) {
-        this.nsuNameProvider = nsuNameProvider;
-    }
+  public void setTransactionId(Long transactionId) {
+    this.transactionId = transactionId;
+  }
 
-    public Integer getAuthentication() {
-        return authentication;
-    }
+  public String getUrlreceipt() {
+    return urlreceipt;
+  }
 
-    public void setAuthentication(Integer authentication) {
-        this.authentication = authentication;
-    }
+  public void setUrlreceipt(String urlreceipt) {
+    this.urlreceipt = urlreceipt;
+  }
 
-    public CelcoinRechargeReceiptDTO getReceipt() {
-        return receipt;
-    }
+  public String getErrorCode() {
+    return errorCode;
+  }
 
-    public void setReceipt(CelcoinRechargeReceiptDTO receipt) {
-        this.receipt = receipt;
-    }
+  public void setErrorCode(String errorCode) {
+    this.errorCode = errorCode;
+  }
 
-    public String getSettleDate() {
-        return settleDate;
-    }
+  public String getMessage() {
+    return message;
+  }
 
-    public void setSettleDate(String settleDate) {
-        this.settleDate = settleDate;
-    }
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
-    public String getCreateDate() {
-        return createDate;
-    }
+  public Integer getStatus() {
+    return status;
+  }
 
-    public void setCreateDate(String createDate) {
-        this.createDate = createDate;
-    }
-
-    public Long getTransactionId() {
-        return transactionId;
-    }
-
-    public void setTransactionId(Long transactionId) {
-        this.transactionId = transactionId;
-    }
-
-    public String getUrlreceipt() {
-        return urlreceipt;
-    }
-
-    public void setUrlreceipt(String urlreceipt) {
-        this.urlreceipt = urlreceipt;
-    }
-
-    public String getErrorCode() {
-        return errorCode;
-    }
-
-    public void setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+  public void setStatus(Integer status) {
+    this.status = status;
+  }
 
 }

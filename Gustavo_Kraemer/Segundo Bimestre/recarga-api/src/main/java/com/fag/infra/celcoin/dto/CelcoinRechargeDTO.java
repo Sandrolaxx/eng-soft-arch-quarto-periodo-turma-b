@@ -1,45 +1,41 @@
 package com.fag.infra.celcoin.dto;
 
 public class CelcoinRechargeDTO {
+  private String cpfCnpj;
+  private Integer providerId;
+  private CelcoinPhoneDTO phone;
+  private CelcoinRechargeValueDTO topupData;
 
-    private String cpfCnpj;
+  public String getCpfCnpj() {
+    return cpfCnpj;
+  }
 
-    private Integer providerId;
+  public void setCpfCnpj(String cpfCnpj) {
+    this.cpfCnpj = cpfCnpj;
+  }
 
-    private CelcoinPhoneDTO phone;
+  public Integer getProviderId() {
+    return providerId;
+  }
 
-    private CelcoinRechargeValueDTO topupData;
+  public void setProviderId(Integer providerId) {
+    this.providerId = providerId;
+  }
 
-    public String getCpfCnpj() {
-        return cpfCnpj;
-    }
+  public CelcoinPhoneDTO getPhone() {
+    return phone;
+  }
 
-    public void setCpfCnpj(String cpfCnpj) {
-        this.cpfCnpj = cpfCnpj;
-    }
+  public void setPhone(CelcoinPhoneDTO phone) {
+    this.phone = phone;
+  }
 
-    public Integer getProviderId() {
-        return providerId;
-    }
+  public CelcoinRechargeValueDTO getTopupData() {
+    return topupData;
+  }
 
-    public void setProviderId(Integer providerId) {
-        this.providerId = providerId;
-    }
-
-    public CelcoinPhoneDTO getPhone() {
-        return phone;
-    }
-
-    public void setPhone(CelcoinPhoneDTO phone) {
-        this.phone = phone;
-    }
-
-    public CelcoinRechargeValueDTO getTopupData() {
-        return topupData;
-    }
-
-    public void setTopupData(CelcoinRechargeValueDTO topupData) {
-        this.topupData = topupData;
-    }
+  public void setTopupData(CelcoinRechargeValueDTO topupData) {
+    this.topupData = topupData;
+  }
 
 }

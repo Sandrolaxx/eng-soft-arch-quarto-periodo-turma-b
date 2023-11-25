@@ -1,65 +1,59 @@
 package com.fag.domain.dto;
 
 public class OperatorDTO {
+  private Integer category;
+  private Integer rechargeType;
+  private String name;
+  private Integer providerId;
+  private Double maxValue;
+  private Double minValue;
 
-    private Integer category;
+  public void setCategory(Integer category) {
+    this.category = category;
+  }
 
-    private Integer rechargeType;
+  public Integer getCategory() {
+    return category;
+  }
 
-    private String name;
+  public void setMaxValue(Double maxValue) {
+    this.maxValue = maxValue;
+  }
 
-    private Integer providerId;
+  public Double getMaxValue() {
+    return maxValue;
+  }
 
-    private Double maxValue;
+  public void setMinValue(Double minValue) {
+    this.minValue = minValue;
+  }
 
-    private Double minValue;
+  public Double getMinValue() {
+    return minValue;
+  }
 
-    public Integer getCategory() {
-        return category;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setCategory(Integer category) {
-        this.category = category;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public Integer getRechargeType() {
-        return rechargeType;
-    }
+  public Integer getRechargeType() {
+    return rechargeType;
+  }
 
-    public void setRechargeType(Integer rechargeType) {
-        this.rechargeType = rechargeType;
-    }
+  public void setRechargeType(Integer rechargeType) {
+    this.rechargeType = rechargeType;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public Integer getProviderId() {
+    return providerId;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getProviderId() {
-        return providerId;
-    }
-
-    public void setProviderId(Integer providerId) {
-        this.providerId = providerId;
-    }
-
-    public Double getMaxValue() {
-        return maxValue;
-    }
-
-    public void setMaxValue(Double maxValue) {
-        this.maxValue = maxValue;
-    }
-
-    public Double getMinValue() {
-        return minValue;
-    }
-
-    public void setMinValue(Double minValue) {
-        this.minValue = minValue;
-    }
+  public void setProviderId(Integer providerId) {
+    this.providerId = providerId;
+  }
 
 }

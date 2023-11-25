@@ -1,85 +1,77 @@
 package com.fag.domain.dto;
 
 public class RechargeDTO {
+  private String id;
+  private Double value;
+  private String document;
+  private Integer operatorId;
+  private PhoneDTO phone;
+  private String receipt;
+  private Long transactionId;
+  private boolean success;
 
-    private String id;
+  public Double getValue() {
+    return value;
+  }
 
-    private Double value;
+  public void setValue(Double value) {
+    this.value = value;
+  }
 
-    private String document;
+  public String getDocument() {
+    return document;
+  }
 
-    private Integer operatorId;
+  public void setDocument(String document) {
+    this.document = document;
+  }
 
-    private PhoneDTO phone;
+  public PhoneDTO getPhone() {
+    return phone;
+  }
 
-    private String receipt;
+  public void setPhone(PhoneDTO phone) {
+    this.phone = phone;
+  }
 
-    private Long transactionId;
+  public String getReceipt() {
+    return receipt;
+  }
 
-    private boolean success;
+  public void setReceipt(String receipt) {
+    this.receipt = receipt;
+  }
 
-    public Double getValue() {
-        return value;
-    }
+  public boolean isSuccess() {
+    return success;
+  }
 
-    public void setValue(Double value) {
-        this.value = value;
-    }
+  public void setSuccess(boolean success) {
+    this.success = success;
+  }
 
-    public String getDocument() {
-        return document;
-    }
+  public String getId() {
+    return id;
+  }
 
-    public void setDocument(String document) {
-        this.document = document;
-    }
+  public void setId(String id) {
+    this.id = id;
+  }
 
-    public Integer getOperatorId() {
-        return operatorId;
-    }
+  public Integer getOperatorId() {
+    return operatorId;
+  }
 
-    public void setOperatorId(Integer providerId) {
-        this.operatorId = providerId;
-    }
+  public void setOperatorId(Integer operatorId) {
+    this.operatorId = operatorId;
+  }
 
-    public PhoneDTO getPhone() {
-        return phone;
-    }
+  public Long getTransactionId() {
+    return transactionId;
+  }
 
-    public void setPhone(PhoneDTO phone) {
-        this.phone = phone;
-    }
-
-    public String getReceipt() {
-        return receipt;
-    }
-
-    public void setReceipt(String receipt) {
-        this.receipt = receipt;
-    }
-
-    public Long getTransactionId() {
-        return transactionId;
-    }
-
-    public void setTransactionId(Long transactionId) {
-        this.transactionId = transactionId;
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+  public void setTransactionId(Long transactionId) {
+    this.transactionId = transactionId;
+  }
 
 }

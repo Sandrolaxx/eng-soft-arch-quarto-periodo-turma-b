@@ -22,24 +22,23 @@ import jakarta.ws.rs.core.MediaType;
 @RegisterRestClient(baseUri = "https://sandbox.openfinance.celcoin.dev")
 public interface RestClientCelcoin {
 
-    @POST
-    @Path("/v5/token")
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    CelcoinTokenDTO generateToken(Form form);
-    
-    @GET
-    @Path("/v5/transactions/topups/providers")
-    CelcoinOperatorsDTO listOperators(@HeaderParam("Authorization") String token,
-            @QueryParam("stateCode") Integer stateCode, @QueryParam("category") Integer category);
+  @POST
+  @Path("/v5/token")
+  @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+  CelcoinTokenDTO generateToken(Form form);
 
-    @GET
-    @Path("/v5/transactions/topups/provider-values")
-    CelcoinProductsDTO listProducts(@HeaderParam("Authorization") String token,
-    @QueryParam("stateCode") Integer stateCode, @QueryParam("providerId") Integer operatorId);
-    
-    @POST
-    @Path("/v5/transactions/topups")
-    @Consumes(MediaType.APPLICATION_JSON)
-    CelcoinRechargeResponseDTO handleRecharge(@HeaderParam("Authorization") String token, CelcoinRechargeDTO payload);
+  @GET
+  @Path("/v5/transactions/topups/providers")
+  CelcoinOperatorsDTO listOperators(@HeaderParam("Authorization") String token,
+      @QueryParam("stateCode") Integer stateCode, @QueryParam("category") Integer category);
 
+  @GET
+  @Path("/v5/transactions/topups/provider-values")
+  CelcoinProductsDTO listProducts(@HeaderParam("Authorization") String token,
+      @QueryParam("stateCode") Integer stateCode, @QueryParam("providerId") Integer operatorId);
+
+  @POST
+  @Path("/v5/transactions/topups")
+  @Consumes(MediaType.APPLICATION_JSON)
+  CelcoinRechargeResponseDTO handleRecharge(@HeaderParam("Authorization") String token, CelcoinRechargeDTO payload);
 }
