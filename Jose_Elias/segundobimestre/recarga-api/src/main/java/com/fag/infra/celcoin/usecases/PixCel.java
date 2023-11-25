@@ -5,10 +5,15 @@
 package com.fag.infra.celcoin.usecases;
 
 import com.fag.domain.dto.PixDTO;
-import com.fag.infra.celcoin.repository.PixVendor;
-import com.fag.infra.celcoin.repository.RestClientCelcoin;
+import com.fag.domain.repositories.IPixVendor;
+import com.fag.infra.celcoin.dto.CelPixDTO;
+import com.fag.infra.celcoin.dto.CelPixResponseDTO;
+import com.fag.infra.celcoin.dto.CelTokenDTO;
+import com.fag.infra.celcoin.mappers.CelPixMapper;
+import com.fag.infra.celcoin.service.RestClientCel;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.core.Form;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 /**
@@ -16,20 +21,19 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
  * @author molin
  */
 @ApplicationScoped
-public class PixCel implements PixVendor {
-
+public class PixCel implements IPixVendor {
   @Inject
   @RestClient
-  RestClientCelcoin restClientCel;
+  RestClientCel clientCel;
 
   @Override
   public PixDTO create(PixDTO pix) {
     CelPixDTO pixDTO = CelPixMapper.toVendorDTO(pix);
 
-    CelPixResponseDTO response = restClientCel.handlePix(getToken(), pixDTO);
+    CelPixResponseDTO pixResponse = clientCel.handlePix(getToken(), pixDTO);
 
-    pix.setQrCode(response.getQrCode());
-    pix.setTransactionId(response.getTransactionId());
+    pix.setQrCode(pixResponse.getQrCode());
+    pix.setTransactionId(pixResponse.getTransactionId());
 
     return pix;
   }
@@ -41,10 +45,9 @@ public class PixCel implements PixVendor {
     form.param("grant_type", "client_credentials");
     form.param("client_secret", "e9d15cde33024c1494de7480e69b7a18c09d7cd25a8446839b3be82a56a044a3");
 
-    CelcoinTokenDTO tokenDTO = restClient.generateToken(form);
+    CelTokenDTO tokenDTO = clientCel.generateToken(form);
     String token = "Bearer " + tokenDTO.getAccessToken();
 
     return token;
   }
-
 }

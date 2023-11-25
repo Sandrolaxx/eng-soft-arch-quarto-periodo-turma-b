@@ -3,10 +3,10 @@ package com.fag.infra.celcoin.repository;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import com.fag.infra.celcoin.dto.CelOperatorsDTO;
-import com.fag.infra.celcoin.dto.CelcoinProductsDTO;
-import com.fag.infra.celcoin.dto.CelcoinRechargeDTO;
-import com.fag.infra.celcoin.dto.CelcoinRechargeResponseDTO;
-import com.fag.infra.celcoin.dto.CelcoinTokenDTO;
+import com.fag.infra.celcoin.dto.CelProductsDTO;
+import com.fag.infra.celcoin.dto.CelRechargeDTO;
+import com.fag.infra.celcoin.dto.CelRechargeResponseDTO;
+import com.fag.infra.celcoin.dto.CelTokenDTO;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.Consumes;
@@ -25,7 +25,7 @@ public interface RestClientCelcoin {
     @POST
     @Path("/v5/token")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    CelcoinTokenDTO generateToken(Form form);
+    CelTokenDTO generateToken(Form form);
     
     @GET
     @Path("/v5/transactions/topups/providers")
@@ -34,12 +34,12 @@ public interface RestClientCelcoin {
 
     @GET
     @Path("/v5/transactions/topups/provider-values")
-    CelcoinProductsDTO listProducts(@HeaderParam("Authorization") String token,
+    CelProductsDTO listProducts(@HeaderParam("Authorization") String token,
     @QueryParam("stateCode") Integer stateCode, @QueryParam("providerId") Integer operatorId);
     
     @POST
     @Path("/v5/transactions/topups")
     @Consumes(MediaType.APPLICATION_JSON)
-    CelcoinRechargeResponseDTO handleRecharge(@HeaderParam("Authorization") String token, CelcoinRechargeDTO payload);
+    CelRechargeResponseDTO handleRecharge(@HeaderParam("Authorization") String token, CelRechargeDTO payload);
 
 }

@@ -1,6 +1,6 @@
 package com.fag.infra.celcoin.dto;
 
-public class CelcoinRechargeReceiptDTO {
+public class CelRechargeReceiptDTO {
 
     private String receiptData;
 

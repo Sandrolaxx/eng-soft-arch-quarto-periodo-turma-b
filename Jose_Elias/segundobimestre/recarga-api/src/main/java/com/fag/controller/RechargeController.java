@@ -5,7 +5,7 @@
 package com.fag.controller;
 
 import com.fag.domain.dto.RechargeDTO;
-import com.fag.services.RechargeService;
+import com.fag.service.RechargeService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.HeaderParam;

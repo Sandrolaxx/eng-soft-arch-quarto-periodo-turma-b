@@ -1,6 +1,6 @@
 package com.fag.infra.celcoin.dto;
 
-public class CelcoinRechargeDTO {
+public class CelRechargeDTO {
 
     private String cpfCnpj;
 
@@ -8,7 +8,7 @@ public class CelcoinRechargeDTO {
 
     private CelPhoneDTO phone;
 
-    private CelcoinRechargeValueDTO topupData;
+    private CelRechargeValueDTO topupData;
 
     public String getCpfCnpj() {
         return cpfCnpj;
@@ -34,11 +34,11 @@ public class CelcoinRechargeDTO {
         this.phone = phone;
     }
 
-    public CelcoinRechargeValueDTO getTopupData() {
+    public CelRechargeValueDTO getTopupData() {
         return topupData;
     }
 
-    public void setTopupData(CelcoinRechargeValueDTO topupData) {
+    public void setTopupData(CelRechargeValueDTO topupData) {
         this.topupData = topupData;
     }
 

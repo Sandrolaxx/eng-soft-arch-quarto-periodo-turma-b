@@ -2,7 +2,7 @@ package com.fag.infra.celcoin.dto;
 
 import jakarta.json.bind.annotation.JsonbProperty;
 
-public class CelcoinTokenDTO {
+public class CelTokenDTO {
     
     @JsonbProperty("access_token")
     private String accessToken;

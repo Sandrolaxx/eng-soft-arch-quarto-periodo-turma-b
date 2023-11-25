@@ -1,6 +1,6 @@
 package com.fag.infra.celcoin.dto;
 
-public class CelcoinRechargeValueDTO {
+public class CelRechargeValueDTO {
 
     private Double value;
 

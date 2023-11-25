@@ -3,7 +3,7 @@ package com.fag.infra.celcoin.mappers;
 import com.fag.domain.dto.OperatorDTO;
 import com.fag.infra.celcoin.dto.CelOperatorDTO;
 
-public class CelcoinOperatorMapper {
+public class CelOperatorMapper {
 
     public static OperatorDTO toAppDTO(CelOperatorDTO vendorDTO) {
         OperatorDTO appDTO = new OperatorDTO();

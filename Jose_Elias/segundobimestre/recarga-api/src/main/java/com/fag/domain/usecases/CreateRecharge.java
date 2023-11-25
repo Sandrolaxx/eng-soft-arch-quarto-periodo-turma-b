@@ -12,7 +12,7 @@ public class CreateRecharge {
 
     private IRechargeDataBaseRepository dbRepository;
 
-    public CreateRecharge(IRechargeVendor vendor, IRechargeDataBaseRepository dbRepository) {
+    public CreateRecharge(IRechargeVendor vendor) {
         this.vendor = vendor;
         this.dbRepository = dbRepository;
     }

@@ -3,7 +3,7 @@ package com.fag.infra.celcoin.mappers;
 import com.fag.domain.dto.PhoneDTO;
 import com.fag.infra.celcoin.dto.CelPhoneDTO;
 
-public class CelcoinRechargePhoneMapper {
+public class CelRechargePhoneMapper {
 
     public static PhoneDTO toAppDTO(CelPhoneDTO vendorDTO) {
         PhoneDTO appDTO = new PhoneDTO();

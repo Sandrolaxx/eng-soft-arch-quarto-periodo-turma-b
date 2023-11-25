@@ -1,6 +1,6 @@
 package com.fag.infra.celcoin.dto;
 
-public class CelcoinProductDTO {
+public class CelProductDTO {
 
     private Integer code;
 
