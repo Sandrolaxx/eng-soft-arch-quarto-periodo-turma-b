@@ -1,0 +1,9 @@
+{
+	"access_token": "TEST-3985442765600681-112300-c0ddb12f68c3cf4b9b38e6926c5b817c-778910195",
+	"token_type": "Bearer",
+	"expires_in": 15552000,
+	"scope": "offline_access payments read write",
+	"user_id": 778910195,
+	"refresh_token": "TG-655ed6c3b8e1ea000158a983-778910195",
+	"public_key": "TEST-2f0a7ff7-289d-4e99-8e8e-edd613a4c1a6"
+}
