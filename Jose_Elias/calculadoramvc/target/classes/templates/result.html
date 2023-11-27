@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <title>Resultado</title>
+
+    <style>
+        body {
+            background-color: #FFD700;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bolder;
+        }
+        div {
+            background-color: white;
+            color: black;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        {#if warn}
+            <p></p>
+        {#else}
+            
+        {/if}
+        <p>
+            O resultado da {opcao} é {result}
+        </p>
+    </div>
+</body>
+
+</html>

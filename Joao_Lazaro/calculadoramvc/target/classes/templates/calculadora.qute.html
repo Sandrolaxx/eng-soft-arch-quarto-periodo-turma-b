@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora MVC</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            main {
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                color: #393939;
+                background-image: linear-gradient(135deg, #000000, #d3d3d3);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-weight: bold;
+            }
+
+            .box {
+                width: 250px;
+                height: 280px;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+                position: relative;
+                background-color: #f0f8ff;
+                border-radius: 5px;
+                box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.6);
+            }
+
+            .input-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            input {
+                padding: 5px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: #d8d8d8;
+                border-radius: 3px;
+                outline: none;
+            }
+
+            input:focus {
+                border-color: #393939;
+                box-shadow: 0px 0px 5px 0px #393939
+            }
+
+            select {
+                width: 100%;
+                height: 25px;
+                font-size: 10px;
+                border-color: #d8d8d8;
+                border-radius: 3px;
+                outline: none;
+                cursor: pointer;
+            }
+
+            button {
+                width: 100%;
+                height: 30px;
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                background-color: #868686;
+                border-radius: 3px;
+                border: none;
+                outline: none;
+            }
+
+            button:hover{
+                background-color: #393939;
+                cursor: pointer;
+            }
+
+            .footer{
+                color: white;
+                margin: 0;
+                font-size: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/resultado" method="get">
+            <main>
+                <div class = box>
+                    <div class="input-container">
+                        <label for="valor1">Informe o primeiro número</label>
+                        <input id="valor1" type="number" name="val1" required></input>
+                    </div>
+                    <div class="input-container">
+                        <label for="valor2">Informe o segundo número</label>
+                        <input id="valor2" type="number" name="val2" required></input>
+                    </div>
+                    <select name="operador">
+                        <option value="soma">Soma</option>
+                        <option value="subtracao">Subtração</option>
+                        <option value="multiplicacao">Multiplicação</option>
+                        <option value="divisao">Divisão</option>
+                    </select>
+                    <button>Calcular</button>
+                </div>
+            </main>  
+        </form>
+    </body>
+</html>

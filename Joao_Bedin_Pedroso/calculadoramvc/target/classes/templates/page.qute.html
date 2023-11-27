@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+<style>
+    body {
+     font-family: 'Arial', sans-serif;
+     background-color: #f4f4f4;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ }
+
+ h1, h2 {
+     text-align: center;
+ }
+
+ .input {
+     background-color: #ffffff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     width: 100%;
+     max-width: 400px;
+ }
+
+ label {
+     display: block;
+     margin-bottom: 10px;
+ }
+
+ input, select, button {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 20px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     font-size: 16px;
+ }
+
+ button {
+     background-color: #007BFF;
+     color: #ffffff;
+     border: none;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ button:hover {
+     background-color: #0056b3;
+ }
+
+ p {
+     text-align: center;
+     font-size: 18px;
+     color: #333;
+ }
+
+</style>
+<form class="input">
+    <label for="num1">Número 1</label>
+    <input name="num1">
+    <label for="num2">Número 2</label>
+    <input name="num2">
+    <select name="operacao" id="operacao">
+        <option value="+" selected="selected">Soma</option>
+        <option value="-">Subtração</option>
+        <option value="*">Multiplicação</option>
+        <option value="/">Divisão</option>
+    </select>
+    <button type="submit">enviar</button>
+    <p>Resultado: {resultado ?: "0"}
+    </p>
+</form>
+</body>
+</html>
