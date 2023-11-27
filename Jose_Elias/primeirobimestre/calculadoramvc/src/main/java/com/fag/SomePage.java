@@ -71,6 +71,14 @@ public class SomePage {
         return result.data("result", resultado)
                 .data("opcao", opcao)
                 .data("warn", warn);
+<<<<<<< HEAD:Jose_Elias/primeirobimestre/calculadoramvc/src/main/java/com/fag/SomePage.java
+
+
     }
 
 }
+=======
+    }
+
+}
+>>>>>>> 1a2d30c6ba066fbc7944d980eb690abdad5f7785:Jose_Elias/calculadoramvc/src/main/java/com/fag/SomePage.java
