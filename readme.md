@@ -1,5 +1,17 @@
 ## 🏗Projeto de Arquitetura de Software
 
+### Melhores Alunos🏆
+
+![melhores](https://github.com/Sandrolaxx/learning-java/assets/61207420/5123d6b2-ccd7-43d9-946f-766a824d5719)
+
+Abaixo os três melhores alunos da sala, estes que foram extremamente participativos em aula, buscaram ativamente o conhecimento e entregaram projetos de alto nível em ambos os bimestres. Parabéns e continuem assim!
+
+* Lucas Rodrigo Leal Lopes
+* Hulysses Danciger Magalhães Fogaça
+* Patrick Stegaribe de Almeida
+
+---
+
 ### Destaques do Repo✨
 
 **Abaixo estão os 8 trabalhos de alunos que fizeram tanto um front quanto um back-end bonito.**
